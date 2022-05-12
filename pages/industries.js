@@ -4,8 +4,10 @@ import Header from './coponents/header';
 import TabsSection from './coponents/tabs';
 import { BsArrowRight } from 'react-icons/bs';
 import StoryBox from './coponents/story-box';
+import { useState } from 'react';
 
 export default function Industries() {
+
   return (
     <>
       <Header />
@@ -44,10 +46,11 @@ export default function Industries() {
             />
             <h3 className="text-[#302E2E] text-xl font-medium">Finance</h3>
             <ul className="space-y-3">
-              <li className="text-[#585858] hover:text-[#8DC63F] text-[15px]] font-semibold flex items-center space-x-2">
+              <a className="text-[#585858] hover:text-[#8DC63F] text-[15px]] font-semibold flex items-center space-x-2">
                 <BsArrowRight />
                 <span>Financial Global</span>
-              </li>
+              </a>
+              
               <li className="text-[#585858] hover:text-[#8DC63F] text-[15px]] font-semibold flex items-center space-x-2">
                 <BsArrowRight />
                 <span>General Ledger</span>
