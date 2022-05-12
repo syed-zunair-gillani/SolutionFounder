@@ -9,7 +9,7 @@ export default function Success_stories() {
       <Header />
 
       <Banner
-        heading="SOLUTION FOUNDER CASE STUDIES"
+        heading="SOLUTION FOUNDER CASE STUDIES 123"
         icon="stories-banner-img.png"
       />
 
