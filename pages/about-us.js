@@ -4,8 +4,12 @@ import Footer from "./coponents/footer";
 import Header from "./coponents/header";
 import StoryBox from "./coponents/story-box";
 import Team from "./coponents/team";
+import { useState } from 'react';
 
 export default function About_us() {
+
+    const [tab, setTab] = useState(1);
+
     return (
         <>
 
@@ -55,49 +59,55 @@ export default function About_us() {
                 <div className="max-w-[1200px] mx-auto">
                     <h2 className="md:text-4xl text-3xl leading-8 uppercase font-bold text-[#302E2E] text-center mb-8">OUR TEAM</h2>
                     <ul id="tabs" className="md:inline-flex md:space-x-5 md:space-y-0 space-x-0 space-y-5">
+                        
                         <li>
-                            <a href="#first" id="default-tab">
+                            <a onClick={()=>setTab(1)}>
                                 <div className="w-full flex items-center justify-items-center py-3 px-6 rounded-md shadow-sh bg-white">
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
-                                    <h3 className="text-sm ml-2">All</h3>
+                                    <h3 className="text-sm ml-2 w-28 whitespace-nowrap"> All</h3>
                                 </div>
+                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 1 ? 'block' : 'hidden'}`} ></img>
                             </a>
                         </li>
                         <li>
-                            <a href="#second">
+                            <a onClick={()=>setTab(2)}>
                                 <div className="w-full flex items-center justify-items-center py-3 px-6 rounded-md shadow-sh bg-white">
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
-                                    <h3 className="text-sm ml-2"> Management Team</h3>
+                                    <h3 className="text-sm ml-2 w-28 whitespace-nowrap"> Management Team</h3>
                                 </div>
+                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 2 ? 'block' : 'hidden'}`} ></img>
                             </a>
                         </li>
                         <li>
-                            <a href="#third">
+                            <a onClick={()=>setTab(3)}>
                                 <div className="w-full flex items-center justify-items-center py-3 px-6 rounded-md shadow-sh bg-white">
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
-                                    <h3 className="text-sm ml-2"> Functional Team</h3>
+                                    <h3 className="text-sm ml-2 w-28 whitespace-nowrap"> Functional Team</h3>
                                 </div>
+                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 3 ? 'block' : 'hidden'}`}></img>
                             </a>
                         </li>
                         <li>
-                            <a href="#fourth">
+                            <a onClick={()=>setTab(4)}>
                                 <div className="w-full flex items-center justify-items-center py-3 px-6 rounded-md shadow-sh bg-white">
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
-                                    <h3 className="text-sm ml-2"> Technical Team</h3>
+                                    <h3 className="text-sm ml-2 w-28 whitespace-nowrap"> Technical Team</h3>
                                 </div>
+                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 4 ? 'block' : 'hidden'}`}></img>
                             </a>
                         </li>
                         <li>
-                            <a href="#fifth">
+                            <a onClick={()=>setTab(5)}>
                                 <div className="w-full flex items-center justify-items-center py-3 px-6 rounded-md shadow-sh bg-white">
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
-                                    <h3 className="text-sm ml-2">Board of Directors</h3>
+                                    <h3 className="text-sm ml-2 w-28 whitespace-nowrap">Board of Directors</h3>
                                 </div>
+                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 5 ? 'block' : 'hidden'}`}></img>
                             </a>
                         </li>
                     </ul>
                     <div id="tab-contents">
-                        <div id="first" className="border-t border-black pt-14">
+                        <div id="first" className={`border-t border-black pt-14 ${tab === 1 ? 'block' : 'hidden'}`}>
                             <div className="grid md:grid-cols-4 gap-5">
                                 <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" />
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Bassam-Al-Shimrani.jpg" />
@@ -109,9 +119,9 @@ export default function About_us() {
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="James.jpg" />
                             </div>
                         </div>
-                        <div id="second" className="hidden">
+                        <div id="second" className={`border-t border-black pt-14 ${tab === 2 ? 'block' : 'hidden'}`}>
                             <div className="grid md:grid-cols-4 gap-5">
-                                <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" />
+                                {/* <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" /> */}
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Bassam-Al-Shimrani.jpg" />
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Waqas-Hameed.jpg" />
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="James.jpg" />
@@ -121,10 +131,10 @@ export default function About_us() {
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="James.jpg" />
                             </div>
                         </div>
-                        <div id="third" className="hidden">
+                        <div id="third" className={`border-t border-black pt-14 ${tab === 3 ? 'block' : 'hidden'}`}>
                             <div className="grid md:grid-cols-4 gap-5">
-                                <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" />
-                                <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Bassam-Al-Shimrani.jpg" />
+                                {/* <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" /> */}
+                                {/* <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Bassam-Al-Shimrani.jpg" /> */}
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Waqas-Hameed.jpg" />
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="James.jpg" />
                                 <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" />
@@ -133,11 +143,11 @@ export default function About_us() {
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="James.jpg" />
                             </div>
                         </div>
-                        <div id="fourth" className="hidden">
+                        <div id="fourth" className={`border-t border-black pt-14 ${tab === 4 ? 'block' : 'hidden'}`}>
                             <div className="grid md:grid-cols-4 gap-5">
                                 <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" />
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Bassam-Al-Shimrani.jpg" />
-                                <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Waqas-Hameed.jpg" />
+                                {/* <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Waqas-Hameed.jpg" /> */}
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="James.jpg" />
                                 <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" />
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Bassam-Al-Shimrani.jpg" />
@@ -145,10 +155,10 @@ export default function About_us() {
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="James.jpg" />
                             </div>
                         </div>
-                        <div id="fifth" className="hidden">
+                        <div id="fifth" className={`border-t border-black pt-14 ${tab === 5 ? 'block' : 'hidden'}`}>
                             <div className="grid md:grid-cols-4 gap-5">
                                 <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" />
-                                <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Bassam-Al-Shimrani.jpg" />
+                                {/* <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Bassam-Al-Shimrani.jpg" /> */}
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="Waqas-Hameed.jpg" />
                                 <Team name="Bassam Alshamrani​" designation="CEO & HCM specialist" icon="James.jpg" />
                                 <Team name="Muhammad Tahir​" designation="Chief Technology Officer" icon="m-tahir.png" />

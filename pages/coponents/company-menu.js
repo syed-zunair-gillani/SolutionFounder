@@ -10,7 +10,7 @@ export default function Company_Menu() {
         <ol className="space-y-2 ">
           <li className="text-black hover:text-[#8DC63F] text-base font-normal">
             <Link
-              href="../inventory-warehouse-management"
+              href="../about-us"
               className="flex items-center"
             >
               <a className='flex items-center'>
@@ -24,7 +24,7 @@ export default function Company_Menu() {
           </li>
           <li className="text-black hover:text-[#8DC63F] text-base font-normal">
             <Link href="../quality-management" className="flex items-center">
-              <a className='flex iitem-center'>
+              <a className='flex items-center'>
                 <span className="mr-3">
                   <FaUserAlt />
                 </span>
@@ -34,7 +34,7 @@ export default function Company_Menu() {
           </li>
           <li className="text-black hover:text-[#8DC63F] text-base font-normal">
             <Link href="../purchase-management" className="flex items-center">
-              <a className='flex item-center'>
+              <a className='flex items-center'>
                 <span className="mr-3">
                   <AiFillMessage />
                 </span>
