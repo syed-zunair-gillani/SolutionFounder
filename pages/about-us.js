@@ -6,6 +6,8 @@ import StoryBox from "./coponents/story-box";
 import Team from "./coponents/team";
 import { useState } from 'react';
 
+
+
 export default function About_us() {
 
     const [tab, setTab] = useState(1);
@@ -66,7 +68,7 @@ export default function About_us() {
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
                                     <h3 className="text-sm ml-2 w-28 whitespace-nowrap"> All</h3>
                                 </div>
-                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 1 ? 'block' : 'hidden'}`} ></img>
+                                <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 1 ? 'block' : 'hidden'}`} ></img>
                             </a>
                         </li>
                         <li>
@@ -75,7 +77,7 @@ export default function About_us() {
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
                                     <h3 className="text-sm ml-2 w-28 whitespace-nowrap"> Management Team</h3>
                                 </div>
-                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 2 ? 'block' : 'hidden'}`} ></img>
+                                <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 2 ? 'block' : 'hidden'}`} ></img>
                             </a>
                         </li>
                         <li>
@@ -84,7 +86,7 @@ export default function About_us() {
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
                                     <h3 className="text-sm ml-2 w-28 whitespace-nowrap"> Functional Team</h3>
                                 </div>
-                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 3 ? 'block' : 'hidden'}`}></img>
+                                <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 3 ? 'block' : 'hidden'}`}></img>
                             </a>
                         </li>
                         <li>
@@ -93,7 +95,7 @@ export default function About_us() {
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
                                     <h3 className="text-sm ml-2 w-28 whitespace-nowrap"> Technical Team</h3>
                                 </div>
-                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 4 ? 'block' : 'hidden'}`}></img>
+                                <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 4 ? 'block' : 'hidden'}`}></img>
                             </a>
                         </li>
                         <li>
@@ -102,7 +104,7 @@ export default function About_us() {
                                     <img src="/images/setting.png" alt="setting.png" className="md:w-[25%] w-[10%]" />
                                     <h3 className="text-sm ml-2 w-28 whitespace-nowrap">Board of Directors</h3>
                                 </div>
-                                <img src="/images/color-bar.jpg" className={`w-full ${tab === 5 ? 'block' : 'hidden'}`}></img>
+                                <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 5 ? 'block' : 'hidden'}`}></img>
                             </a>
                         </li>
                     </ul>
