@@ -14,7 +14,7 @@ export default function Company_Menu() {
             >
               <span className="mr-3">
                 <AiFillQuestionCircle />
-              </span>{' '}
+              </span>
               About us
             </a>
           </li>
@@ -22,7 +22,7 @@ export default function Company_Menu() {
             <a href="../quality-management" className="flex items-center">
               <span className="mr-3">
                 <FaUserAlt />
-              </span>{' '}
+              </span>
               Career
             </a>
           </li>
@@ -30,7 +30,7 @@ export default function Company_Menu() {
             <a href="../purchase-management" className="flex items-center">
               <span className="mr-3">
                 <AiFillMessage />
-              </span>{' '}
+              </span>
               Contact Us​
             </a>
           </li>

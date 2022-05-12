@@ -26,7 +26,7 @@ export default function career() {
           <div className="accordion grid gap-4">
             <div className="accordion__item">
               <input type="checkbox" id="title1" />
-              <label for="title1">
+              <label htmlFor="title1">
                 Odoo Functional Consultant – Project Manager
               </label>
               <div className="content">
@@ -82,7 +82,7 @@ export default function career() {
             </div>
             <div className="accordion__item ">
               <input type="checkbox" id="title2" />
-              <label for="title2">Odoo Developer (Lahore Pakistan)</label>
+              <label htmlFor="title2">Odoo Developer (Lahore Pakistan)</label>
               <div className="content">
                 <p classs="text-base font-medium text-center text-[#535353]">
                   As an Odoo developer, you will lead and participate in
@@ -112,7 +112,7 @@ export default function career() {
             </div>
             <div className="accordion__item ">
               <input type="checkbox" id="title3" />
-              <label for="title3">Odoo Developer (Karachi Pakistan)</label>
+              <label htmlhtmlFor="title3">Odoo Developer (Karachi Pakistan)</label>
               <div className="content">
                 <p classs="text-base font-medium text-center text-[#535353]">
                   As an Odoo developer, you will lead and participate in
@@ -142,7 +142,7 @@ export default function career() {
             </div>
             <div className="accordion__item ">
               <input type="checkbox" id="title4" />
-              <label for="title4">Odoo Developer (Ahmedabad, Gujarat)</label>
+              <label htmlFor="title4">Odoo Developer (Ahmedabad, Gujarat)</label>
               <div className="content">
                 <p classs="text-base font-medium text-center text-[#535353]">
                   As an Odoo developer, you will lead and participate in
@@ -172,7 +172,7 @@ export default function career() {
             </div>
             <div className="accordion__item ">
               <input type="checkbox" id="title5" />
-              <label for="title5">
+              <label htmlFor="title5">
                 Odoo Developer Internship (Lahore Pakistan)
               </label>
               <div className="content">
@@ -213,7 +213,7 @@ export default function career() {
             </div>
             <div className="accordion__item ">
               <input type="checkbox" id="title6" />
-              <label for="title6">
+              <label htmlFor="title6">
                 Odoo Developer Internship (Karachi Pakistan)
               </label>
               <div className="content">
@@ -254,7 +254,7 @@ export default function career() {
             </div>
             <div className="accordion__item ">
               <input type="checkbox" id="title7" />
-              <label for="title7">
+              <label htmlFor="title7">
                 Odoo Developer Internship (Ahmedabad, Gujarat)
               </label>
               <div className="content">

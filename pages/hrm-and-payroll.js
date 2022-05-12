@@ -92,9 +92,9 @@ export default function Hrm_And_Payroll() {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
                     d="M14 5l7 7m0 0l-7 7m7-7H3"
                   ></path>
                 </svg>
@@ -139,9 +139,9 @@ export default function Hrm_And_Payroll() {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
                     d="M14 5l7 7m0 0l-7 7m7-7H3"
                   ></path>
                 </svg>
@@ -186,9 +186,9 @@ export default function Hrm_And_Payroll() {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
                     d="M14 5l7 7m0 0l-7 7m7-7H3"
                   ></path>
                 </svg>
@@ -233,9 +233,9 @@ export default function Hrm_And_Payroll() {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
                     d="M14 5l7 7m0 0l-7 7m7-7H3"
                   ></path>
                 </svg>

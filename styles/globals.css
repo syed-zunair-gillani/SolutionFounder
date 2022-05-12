@@ -100,7 +100,7 @@
 .policy svg{
     height: 25px;
     min-width: 20px;
-    stroke-width: 1;
+    strokeWidth: 1;
 }
 
 .team:hover{

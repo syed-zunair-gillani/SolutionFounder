@@ -36,7 +36,7 @@ export default function About_us() {
                         <p className="text-base tracking-normal font-medium text-white">To be the right technology enabler for world.</p>
                         <button className="main-button hover:bg-[#302E2E] items-center">Lets Started
                             <svg xmlns="http://www.w3.org/2000/svg" className="inline-block w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                             </svg>
                         </button>
                     </div>
