@@ -8,7 +8,7 @@ import StoryBox from './coponents/story-box';
 export default function Transportation() {
   return (
     <>
-      <Header />
+      <Header/>
 
       <Banner
         heading="TRANSPORTATION AND LOGISTICS"

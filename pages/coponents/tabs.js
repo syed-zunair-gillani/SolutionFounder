@@ -123,41 +123,6 @@ export default function TabsSection() {
             </li>
           </ul>
 
-          {/* <div id="first" className={`border-t border-black pt-14 ${tab === 1 ? 'block' : 'hidden'}`}>
-            <div className="flex md:flex-row flex-col pt-5 md:space-y-0 space-y-2 items-center">
-                  <p className="text-lg font-medium text-[#585858] md:w-4/5 w-full md:text-left text-center">
-                    Simplifying transportation operations with real-time processes
-                    Meet new technology requirements and changing customer needs
-                    by streamlining processes and using analytics for real-time
-                    Insights linked to your financial results.
-                  </p>
-                  <div className="md:w-1/5 w-full flex md:justify-end justify-center">
-                    <button className="main-button hover:bg-[#302E2E] items-center ">
-                      Explore More
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="inline-block w-4 h-4 ml-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="3"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
-            </div>
-          </div>
-          <div id="second" className={`border-t border-black pt-14 ${tab === 2 ? 'block' : 'hidden'}`}>
-              <div className="grid md:grid-cols-4 gap-5">
-                  35435
-              </div>
-          </div> */}
-
           <div id="tab-contents">
             <div id="first" className={`border-t border-black ${tab === 1 ? 'block' : 'hidden'}`}>
               <div className="flex md:flex-row flex-col pt-5 md:space-y-0 space-y-2 items-center">

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Mega_Menu from './mega-menu';
 import { useState } from 'react';
 import Company_Menu from './company-menu';
+import Image from 'next/image';
 
 export default function Header() {
 
@@ -27,6 +28,9 @@ export default function Header() {
                 src="/images/SF-White.png"
                 alt="SF-White.png"
                 className="max-w-[80%] cursor-pointer"
+                layout='fill'
+                
+                
               />
             </Link>
           </div>
@@ -47,7 +51,7 @@ export default function Header() {
                 </span>
               </li>
               <li className="inline text-white text-base font-semibold">
-                <Link href="industries">Industries Solution</Link>
+                <Link href="industries-solution">Industries Solution</Link>
               </li>
               <li className="inline text-white text-base font-semibold">
                 <Link href="success-stories">Success Stories</Link>

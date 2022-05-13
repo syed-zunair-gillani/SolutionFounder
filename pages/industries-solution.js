@@ -6,7 +6,7 @@ import { BsArrowRight } from 'react-icons/bs';
 import StoryBox from './coponents/story-box';
 import { useState } from 'react';
 
-export default function Industries() {
+export default function IndustriesSolution() {
 
   return (
     <>

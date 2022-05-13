@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 
 
-export default function About_us() {
+export default function company() {
 
     const [tab, setTab] = useState(1);
 

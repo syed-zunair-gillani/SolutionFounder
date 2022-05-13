@@ -1,9 +1,9 @@
-import Header from './coponents/header';
-import Footer from './coponents/footer';
-import Banner from './coponents/banner';
-import Cardnew from './coponents/card-new';
+import Header from '../coponents/header';
+import Footer from '../coponents/footer';
+import Banner from '../coponents/banner';
+import Cardnew from '../coponents/card-new';
 import { BsArrowRight } from 'react-icons/bs';
-import StoryBox from './coponents/story-box';
+import StoryBox from '../coponents/story-box';
 
 export default function Retail() {
   return (

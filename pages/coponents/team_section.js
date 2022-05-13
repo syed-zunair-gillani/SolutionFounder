@@ -19,6 +19,7 @@ export default function TeamSection() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                
               >
                 <path
                   strokeLinecap="round"
