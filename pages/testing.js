@@ -6,7 +6,7 @@ export default function HomePage({ posts }) {
   return (
     <div className="container">
       <main>
-        <h1 className="title">Headless WordPress Next.js Starter</h1>
+        <h1 className="title">Headless WordPress Next.js Starter.</h1>
         <hr />
 
         <div className="grid">

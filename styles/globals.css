@@ -63,7 +63,7 @@
     border: 1px solid #D4D4D4;
     display: flex;
     justify-content: space-between;
-    align-items: center;;
+    align-items: center;
 }
 
 .accordion label:hover {
