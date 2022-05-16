@@ -8,7 +8,7 @@ export default function BlogPost({ posts }) {
           icon="Awarded-as-Best-Starter-Partner-in-MENA.png"
           imglink={data.featuredImage.node.mediaItemUrl}
           title={data.title}
-          slug={data.slug}
+          uri={data.uri}
         />
       ))}
     </>

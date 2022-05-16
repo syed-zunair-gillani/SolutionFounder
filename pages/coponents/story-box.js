@@ -18,7 +18,7 @@ export default function StoryBox(props) {
         }
         <div className="p-5 space-y-1">
           <h3 className="box-title">
-            <Link href={`news-updates/${props.slug}`}>{props.title}</Link>
+            <Link href={`news-updates/${props.uri}`}>{props.title}</Link>
           </h3>
           <p className="text-base font-medium text-[#535353]">
             {props.description}

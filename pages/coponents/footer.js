@@ -11,11 +11,11 @@ export default function Footer() {
         <img
           src="/images/footer-F.png"
           alt="footer-F.png"
-          className="absolute top-[55px] left-0 object-cover"
+          className="absolute top-[55px] left-0 object-cover "
         />
         <div className="max-w-[1200px] mx-auto py-10 md:px-6 px-3">
-          <div className="inline-flex md:w-1/4 items-center">
-            <Link href="#" className="max-w-[80%]">
+          <div className="inline-flex md:w-1/4 items-center w-1/2">
+            <Link href="#" className="">
               <img src="/images/SF-White.png" alt="SF-White.png" />
             </Link>
             <Link href="#" className="w-full ml-2">

@@ -34,7 +34,7 @@ export async function getStaticProps() {
         nodes {
           title
           slug
-          
+          uri
           featuredImage {
             node {
               mediaItemUrl

@@ -192,3 +192,9 @@
     fill: #FFFFFF;
 }
 
+.footer-logo img{
+    max-width: 50% !important;
+}
+.w_12{
+    width: 60% !important;
+}
