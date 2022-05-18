@@ -34,7 +34,7 @@ export default function Banner(props) {
           <div className="items-baseline w-full md:w-1/2">
             <Image
               src={props.bannerURL ? props.bannerURL : `/images/${props.icon}`}
-              alt={props.icon}
+              alt={props.heading}
               className="p-6 pb-0"
               width={540}
               height={456}
