@@ -198,3 +198,45 @@
 .w_12{
     width: 60% !important;
 }
+
+.inner-text h1{
+    font-size: 2.25rem;
+    line-height: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.inner-text p{
+    color: #535353;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#job_content h2{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    font-size: 22px;
+    padding-left: 20px;
+}
+#job_content p{
+    font-size: 1rem;
+    line-height: 1.7;
+    padding-left: 20px;
+}
+#job_content ul{
+    padding-left: 40px;
+}
+#job_content ul li{
+    list-style: disc;
+}
+#job_content button{
+    font-size: 1.2rem;
+    color:#133C6D;
+    font-weight: 600;
+    margin-top: 20px;
+}

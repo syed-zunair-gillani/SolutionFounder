@@ -5,6 +5,7 @@ import TabsSection from './coponents/tabs';
 import { BsArrowRight } from 'react-icons/bs';
 import StoryBox from './coponents/story-box';
 import { useState } from 'react';
+import LatestStories from './coponents/Latest-stories';
 
 export default function IndustriesSolution() {
 
@@ -271,6 +272,7 @@ export default function IndustriesSolution() {
         </div>
       </section>
 
+      {/* <LatestStories/> */}
       <Footer />
     </>
   );

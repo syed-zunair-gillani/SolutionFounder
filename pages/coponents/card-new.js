@@ -1,7 +1,7 @@
 export default function Cardnew(props) {
 
   const features = props.post;
-  console.table(features);
+  
   return (
     <>
       {

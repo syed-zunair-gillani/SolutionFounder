@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 
 export default function LatestStories({ posts }) {
-  console.log('latest', posts);
+  console.log('latest stories****', posts);
   return (
     <>
         <h2 className="md:text-4xl text-3xl leading-8 font-bold text-[#302E2E] text-center mb-8">
@@ -54,16 +54,12 @@ export default function LatestStories({ posts }) {
 
 export async function getStaticProps() {
   const GET_POSTS = gql`
-  query AllPostsQuery {
-    posts {
-      nodes {
-        title
-        slug
-        uri
-        featuredImage {
-          node {
-            mediaItemUrl
-          }
+  query getLatestStories {
+    allSuccessStories {
+      edges {
+        node {
+          uri
+          title
         }
       }
     }
@@ -72,7 +68,7 @@ export async function getStaticProps() {
 const response = await client.query({
   query: GET_POSTS,
 });
-const posts = response?.data?.posts?.nodes;
+const posts = response.data.allSuccessStories;
 return {
   props: {
     posts,

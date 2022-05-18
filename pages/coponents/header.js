@@ -51,13 +51,13 @@ export default function Header() {
                 </span>
               </li>
               <li className="inline text-white text-base font-semibold">
-                <Link href="industries-solution">Industries Solution</Link>
+                <Link href="/industries-solution">Industries Solution</Link>
               </li>
               <li className="inline text-white text-base font-semibold">
-                <Link href="success-stories">Success Stories</Link>
+                <Link href="/success-stories">Success Stories</Link>
               </li>
               <li className="inline text-white text-base font-semibold">
-                <Link href="news-updates">News & Updates</Link>
+                <Link href="/news-updates">News & Updates</Link>
               </li>
               <li className="inline text-white text-base font-semibold cursor-pointer" onClick={HandleComp_MegaMenu}>
                 <span
