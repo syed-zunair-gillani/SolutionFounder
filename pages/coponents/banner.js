@@ -1,5 +1,4 @@
-
-
+import Image from 'next/image';
 export default function Banner(props) {
   return (
     <>
@@ -10,8 +9,9 @@ export default function Banner(props) {
               {props.heading}
             </h2>
             <p className="sub-title">{props.sub_heading}</p>
-            {
-              props.bannerURL ? '' :
+            {props.bannerURL ? (
+              ''
+            ) : (
               <button className="main-button hover:bg-[#302E2E] items-center">
                 Get in Touch
                 <svg
@@ -20,7 +20,7 @@ export default function Banner(props) {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  >
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -29,13 +29,15 @@ export default function Banner(props) {
                   ></path>
                 </svg>
               </button>
-            }
+            )}
           </div>
           <div className="items-baseline w-full md:w-1/2">
-            <img
-              src={ props.bannerURL ?  props.bannerURL : `images/${props.icon}` }
-              alt={`images/${props.title}`}
+            <Image
+              src={props.bannerURL ? props.bannerURL : `/images/${props.icon}`}
+              alt={props.heading}
               className="p-6 pb-0"
+              width={540}
+              height={456}
             />
           </div>
         </div>
