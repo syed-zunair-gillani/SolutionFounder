@@ -29,7 +29,7 @@ export default function Locations(props) {
               href="#"
               className="bg-[#585858] hover:bg-[#302E2E] text-white py-2 px-9 text-sm font-bold uppercase rounded"
             >
-              R&D
+              R and D
             </a>
           </li>
         </ul>
