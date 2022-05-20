@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import bar from '../../public/images/color-bar (1).jpg'
+
 export default function Locations(props) {
   return (
     <>
@@ -20,7 +23,7 @@ export default function Locations(props) {
               href="#"
               className="bg-[#8DC63F] hover:bg-[#302E2E] text-white md:py-2 py-2 md:px-9 px-2 text-sm font-bold uppercase rounded"
             >
-              Software Development{' '}
+              Software Development
             </a>
             <a
               href="#"
@@ -30,11 +33,15 @@ export default function Locations(props) {
             </a>
           </li>
         </ul>
-        <img
-          src="images/color-bar (1).jpg"
-          alt="images/color-bar (1).jpg"
-          className="w-[55%] absolute bottom-0 right-0"
-        />
+        <figure className='absolute -bottom-[6px] right-0'>
+          <Image
+            src={bar}
+            alt="images/color-bar (1).jpg"
+            className="w-[55%] absolute bottom-0 right-0"
+            width={300}
+            height={8}
+          />
+        </figure>
       </div>
     </>
   );

@@ -10,14 +10,14 @@ export default function StoryBox(props) {
           src={props.imglink}
           alt={props.title}
           className=""
-          width={100}
-          height={230}
+          width={500}
+          height={350}
           /> : <Image
           src={props.icon}
           alt={props.title}
           className=""
-          width={100}
-          height={200}
+          width={500}
+          height={350}
           />
         }
         <div className="p-5 space-y-1">

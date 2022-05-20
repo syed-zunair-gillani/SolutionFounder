@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from 'next/image'
 
 export default function TabsSection() {
   const [tab, setTab] = useState(1);
@@ -9,130 +10,177 @@ export default function TabsSection() {
         <div className="max-w-[1200px] mx-auto">
           <ul
             id="tabs"
-            className="md:inline-flex md:space-x-4 md:space-y-0 space-x-0 space-y-4"
+            className="justify-between space-x-0 space-y-4 md:inline-flex md:space-x-4 md:space-y-0"
           >
-            <li>
+            <li className="min-w-[185px] m-0">
               <a onClick={()=>setTab(1)}>
-                <div className="w-full relative flex items-center cursor-pointer justify-items-center py-11 pb-6 px-6 space-y-4 rounded-md flex-col shadow-sh hover:shadow-shl bg-white">
-                  <img
-                    src="/images/F.png"
-                    alt="F.png"
-                    className="absolute top-0 left-0 rounded-md"
-                  />
-                  <img
-                    src="/images/setting.png"
-                    alt="setting.png"
-                    className="w-[32%] h-[48%] mb-4"
-                  />
-                  <h3 className="text-sm text-center">
-                    Logistics & Transportation
-                  </h3>
+                <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
+                  <figure className="absolute top-0 left-0 rounded-md">
+                    <Image
+                      src="/images/F.png"
+                      alt="F.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
+                  <figure>
+                    <Image
+                      src="/images/setting.png"
+                      alt="setting.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
+                  <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-              <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 1 ? 'block' : 'hidden'}`} />
+             <figure className={`w-full h-2 ${tab === 1 ? 'block' : 'hidden'}`}>
+                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             </figure>
             </li>
-            <li>
+            <li className="min-w-[185px] m-0">
               <a onClick={()=>setTab(2)}>
-                <div className="w-full relative flex items-center cursor-pointer justify-items-center py-11 px-6 space-y-4 rounded-md flex-col shadow-sh hover:shadow-shl bg-white">
-                  <img
-                    src="/images/F.png"
-                    alt="F.png"
-                    className="absolute top-0 left-0 rounded-md"
-                  />
-                  <img
-                    src="/images/setting.png"
-                    alt="setting.png"
-                    className="w-[32%] h-[48%] mb-4"
-                  />
+                <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
+                  <figure className="absolute top-0 left-0 rounded-md">
+                    <Image
+                      src="/images/F.png"
+                      alt="F.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
+                  <figure>
+                    <Image
+                      src="/images/setting.png"
+                      alt="setting.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-              <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 2 ? 'block' : 'hidden'}`} />
+             <figure className={`w-full h-2 ${tab === 2 ? 'block' : 'hidden'}`}>
+                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             </figure>
             </li>
-            <li>
+            <li className="min-w-[185px] m-0">
               <a onClick={()=>setTab(3)}>
-                <div className="w-full relative flex items-center cursor-pointer justify-items-center py-11 px-6 space-y-4 rounded-md flex-col shadow-sh hover:shadow-shl bg-white">
-                  <img
-                    src="/images/F.png"
-                    alt="F.png"
-                    className="absolute top-0 left-0 rounded-md"
-                  />
-                  <img
-                    src="/images/setting.png"
-                    alt="setting.png"
-                    className="w-[32%] h-[48%] mb-4"
-                  />
+                <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
+                  <figure className="absolute top-0 left-0 rounded-md">
+                    <Image
+                      src="/images/F.png"
+                      alt="F.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
+                  <figure>
+                    <Image
+                      src="/images/setting.png"
+                      alt="setting.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-              <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 3 ? 'block' : 'hidden'}`} />
+             <figure className={`w-full h-2 ${tab === 3 ? 'block' : 'hidden'}`}>
+                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             </figure>
             </li>
-            <li>
+            <li className="min-w-[185px] m-0">
               <a onClick={()=>setTab(4)}>
-                <div className="w-full relative flex items-center cursor-pointer justify-items-center py-11 px-6 space-y-4 rounded-md flex-col shadow-sh hover:shadow-shl bg-white">
-                  <img
-                    src="/images/F.png"
-                    alt="F.png"
-                    className="absolute top-0 left-0 rounded-md"
-                  />
-                  <img
-                    src="/images/setting.png"
-                    alt="setting.png"
-                    className="w-[32%] h-[48%] mb-4"
-                  />
+                <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
+                  <figure className="absolute top-0 left-0 rounded-md">
+                    <Image
+                      src="/images/F.png"
+                      alt="F.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
+                  <figure>
+                    <Image
+                      src="/images/setting.png"
+                      alt="setting.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-              <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 4 ? 'block' : 'hidden'}`} />
+             <figure className={`w-full h-2 ${tab === 4 ? 'block' : 'hidden'}`}>
+                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             </figure>
             </li>
-            <li>
+            <li className="min-w-[185px] m-0">
               <a onClick={()=>setTab(5)}>
-                <div className="w-full relative flex items-center cursor-pointer justify-items-center py-11 px-6 space-y-4 rounded-md flex-col shadow-sh hover:shadow-shl bg-white">
-                  <img
-                    src="/images/F.png"
-                    alt="F.png"
-                    className="absolute top-0 left-0 rounded-md"
-                  />
-                  <img
-                    src="/images/setting.png"
-                    alt="setting.png"
-                    className="w-[32%] h-[48%] mb-4"
-                  />
+                <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
+                  <figure className="absolute top-0 left-0 rounded-md">
+                    <Image
+                      src="/images/F.png"
+                      alt="F.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
+                  <figure>
+                    <Image
+                      src="/images/setting.png"
+                      alt="setting.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-              <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 5 ? 'block' : 'hidden'}`} />
+             <figure className={`w-full h-2 ${tab === 5 ? 'block' : 'hidden'}`}>
+                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             </figure>
             </li>
-            <li>
+            <li className="min-w-[185px] m-0">
               <a onClick={()=>setTab(6)}>
-                <div className="w-full relative flex items-center cursor-pointer justify-items-center py-11 px-6 space-y-4 rounded-md flex-col shadow-sh hover:shadow-shl bg-white">
-                  <img
-                    src="/images/F.png"
-                    alt="F.png"
-                    className="absolute top-0 left-0 rounded-md"
-                  />
-                  <img
-                    src="/images/setting.png"
-                    alt="setting.png"
-                    className="w-[32%] h-[48%] mb-4"
-                  />
+                <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
+                  <figure className="absolute top-0 left-0 rounded-md">
+                    <Image
+                      src="/images/F.png"
+                      alt="F.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
+                  <figure>
+                    <Image
+                      src="/images/setting.png"
+                      alt="setting.png"
+                      width={45}
+                      height={45}
+                    />
+                  </figure>
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-              <img src="/images/color-bar.jpg" className={`w-full h-2 ${tab === 6 ? 'block' : 'hidden'}`} />
+             <figure className={`w-full h-2 ${tab === 6 ? 'block' : 'hidden'}`}>
+                <img src="/images/color-bar.jpg" width={180} height={5}/>
+             </figure>
             </li>
+
           </ul>
 
-          <div id="tab-contents">
+          <div id="tab-contents" className="mt-[5px]">
             <div id="first" className={`border-t border-black ${tab === 1 ? 'block' : 'hidden'}`}>
-              <div className="flex md:flex-row flex-col pt-5 md:space-y-0 space-y-2 items-center">
+              <div className="flex flex-col items-center pt-5 space-y-2 md:flex-row md:space-y-0">
                 <p className="text-lg font-medium text-[#585858] md:w-4/5 w-full md:text-left text-center">
                   Simplifying transportation operations with real-time processes
                   Meet new technology requirements and changing customer needs
                   by streamlining processes and using analytics for real-time
                   Insights linked to your financial results.
                 </p>
-                <div className="md:w-1/5 w-full flex md:justify-end justify-center">
+                <div className="flex justify-center w-full md:w-1/5 md:justify-end">
                   <button className="main-button hover:bg-[#302E2E] items-center ">
                     Explore More
                     <svg
@@ -154,14 +202,14 @@ export default function TabsSection() {
               </div>
             </div>
             <div className={`border-t border-black ${tab === 2 ? 'block' : 'hidden'}`}>
-              <div className="flex md:flex-row flex-col pt-5 md:space-y-0 space-y-2 items-center">
+              <div className="flex flex-col items-center pt-5 space-y-2 md:flex-row md:space-y-0">
                 <p className="text-lg font-medium text-[#585858] md:w-4/5 w-full md:text-left text-center">
                   2 Simplifying transportation operations with real-time
                   processes Meet new technology requirements and changing
                   customer needs by streamlining processes and using analytics
                   for real-time Insights linked to your financial results.
                 </p>
-                <div className="md:w-1/5 w-full flex md:justify-end justify-center">
+                <div className="flex justify-center w-full md:w-1/5 md:justify-end">
                   <button className="main-button hover:bg-[#302E2E] items-center ">
                     Explore More
                     <svg
@@ -183,14 +231,14 @@ export default function TabsSection() {
               </div>
             </div>
             <div id="third" className={`border-t border-black ${tab === 3 ? 'block' : 'hidden'}`}>
-              <div className="flex md:flex-row flex-col pt-5 md:space-y-0 space-y-2 items-center">
+              <div className="flex flex-col items-center pt-5 space-y-2 md:flex-row md:space-y-0">
                 <p className="text-lg font-medium text-[#585858] md:w-4/5 w-full md:text-left text-center">
                   3 Simplifying transportation operations with real-time
                   processes Meet new technology requirements and changing
                   customer needs by streamlining processes and using analytics
                   for real-time Insights linked to your financial results.
                 </p>
-                <div className="md:w-1/5 w-full flex md:justify-end justify-center">
+                <div className="flex justify-center w-full md:w-1/5 md:justify-end">
                   <button className="main-button hover:bg-[#302E2E] items-center ">
                     Explore More
                     <svg
@@ -212,14 +260,14 @@ export default function TabsSection() {
               </div>
             </div>
             <div id="fourth" className={`border-t border-black ${tab === 4 ? 'block' : 'hidden'}`}>
-              <div className="flex md:flex-row flex-col pt-5 md:space-y-0 space-y-2 items-center">
+              <div className="flex flex-col items-center pt-5 space-y-2 md:flex-row md:space-y-0">
                 <p className="text-lg font-medium text-[#585858] md:w-4/5 w-full md:text-left text-center">
                   4 Simplifying transportation operations with real-time
                   processes Meet new technology requirements and changing
                   customer needs by streamlining processes and using analytics
                   for real-time Insights linked to your financial results.
                 </p>
-                <div className="md:w-1/5 w-full flex md:justify-end justify-center">
+                <div className="flex justify-center w-full md:w-1/5 md:justify-end">
                   <button className="main-button hover:bg-[#302E2E] items-center ">
                     Explore More
                     <svg
@@ -241,14 +289,14 @@ export default function TabsSection() {
               </div>
             </div>
             <div id="fifth" className={`border-t border-black ${tab === 5 ? 'block' : 'hidden'}`}>
-              <div className="flex md:flex-row flex-col pt-5 md:space-y-0 space-y-2 items-center">
+              <div className="flex flex-col items-center pt-5 space-y-2 md:flex-row md:space-y-0">
                 <p className="text-lg font-medium text-[#585858] md:w-4/5 w-full md:text-left text-center">
                   5 Simplifying transportation operations with real-time
                   processes Meet new technology requirements and changing
                   customer needs by streamlining processes and using analytics
                   for real-time Insights linked to your financial results.
                 </p>
-                <div className="md:w-1/5 w-full flex md:justify-end justify-center">
+                <div className="flex justify-center w-full md:w-1/5 md:justify-end">
                   <button className="main-button hover:bg-[#302E2E] items-center ">
                     Explore More
                     <svg
@@ -270,14 +318,14 @@ export default function TabsSection() {
               </div>
             </div>
             <div id="sixth" className={`border-t border-black ${tab === 6 ? 'block' : 'hidden'}`}>
-              <div className="flex md:flex-row flex-col pt-5 md:space-y-0 space-y-2 items-center">
+              <div className="flex flex-col items-center pt-5 space-y-2 md:flex-row md:space-y-0">
                 <p className="text-lg font-medium text-[#585858] md:w-4/5 w-full md:text-left text-center">
                   6 Simplifying transportation operations with real-time
                   processes Meet new technology requirements and changing
                   customer needs by streamlining processes and using analytics
                   for real-time Insights linked to your financial results.
                 </p>
-                <div className="md:w-1/5 w-full flex md:justify-end justify-center">
+                <div className="flex justify-center w-full md:w-1/5 md:justify-end">
                   <button className="main-button hover:bg-[#302E2E] items-center ">
                     Explore More
                     <svg
