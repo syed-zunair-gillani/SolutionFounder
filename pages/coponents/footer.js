@@ -3,14 +3,13 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { AiFillFunnelPlot } from 'react-icons/ai';
 import { FaIndustry } from 'react-icons/fa';
 import Link from 'next/link';
-import Image from 'next/image'
-
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <>
       <section className="relative bg-right-top bg-no-repeat bg-cover bg-footerBg md:bg-center py-14">
-        <figure className='absolute left-2'>
+        <figure className="absolute left-2">
           <Image
             src="/images/footer-F.png"
             alt="footer-F.png"
@@ -21,11 +20,21 @@ export default function Footer() {
         </figure>
         <div className="max-w-[1200px] mx-auto py-10 md:px-6 px-3">
           <div className="inline-flex items-center w-1/2 md:w-1/4">
-            <Link passHref href="#" passHref>
-              <Image src="/images/SF-White.png" alt="SF-White.png" width={800} height={130}/>
+            <Link href="/">
+              <Image
+                src="/images/SF-White.png"
+                alt="SF-White.png"
+                width={800}
+                height={130}
+              />
             </Link>
-            <Link passHref href="#" className="w-full ml-2" passHref>
-              <Image src="/images/hirring.png" alt="hirring.png" width={500} height={140}/>
+            <Link href="/" className="w-full ml-2">
+              <Image
+                src="/images/hirring.png"
+                alt="hirring.png"
+                width={500}
+                height={140}
+              />
             </Link>
           </div>
         </div>
@@ -39,19 +48,29 @@ export default function Footer() {
             </h2>
             <ul className="space-y-4">
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="transportation">ERP Solutions</Link>
+                <Link passHref href="transportation">
+                  ERP Solutions
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="inventory-warehouse-management">Material Management</Link>
+                <Link passHref href="inventory-warehouse-management">
+                  Material Management
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="financial-management">Finance Management</Link>
+                <Link passHref href="financial-management">
+                  Finance Management
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="sales">Customer Experience</Link>
+                <Link passHref href="sales">
+                  Customer Experience
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="hrm-and-payroll">Human Capital Management</Link>
+                <Link passHref href="hrm-and-payroll">
+                  Human Capital Management
+                </Link>
               </li>
             </ul>
           </div>
@@ -64,16 +83,24 @@ export default function Footer() {
             </h2>
             <ul className="space-y-4">
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="about-us">About us</Link>
+                <Link passHref href="about-us">
+                  About us
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="career">Career</Link>
+                <Link passHref href="career">
+                  Career
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="success-stories">Success Stories</Link>
+                <Link passHref href="success-stories">
+                  Success Stories
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="news-updates">News & Updates</Link>
+                <Link passHref href="news-updates">
+                  News & Updates
+                </Link>
               </li>
             </ul>
           </div>
@@ -86,13 +113,19 @@ export default function Footer() {
             </h2>
             <ul className="space-y-4">
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="retail">Retail</Link>
+                <Link passHref href="retail">
+                  Retail
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="manufacturing">Manufacturing</Link>
+                <Link passHref href="manufacturing">
+                  Manufacturing
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="trading-distribution">Trading Distribution</Link>
+                <Link passHref href="trading-distribution">
+                  Trading Distribution
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
                 <Link passHref href="custom-clearance-and-freight-forwarding">
@@ -100,7 +133,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="transportation">Logistics & Transportation</Link>
+                <Link passHref href="transportation">
+                  Logistics & Transportation
+                </Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
                 <Link passHref href="construction-and-contracting">
@@ -113,7 +148,9 @@ export default function Footer() {
             <h2 className="text-lg font-bold text-white">Help and Support</h2>
             <ul className="space-y-4">
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="contact-us">Contact Us</Link>
+                <Link passHref href="contact-us">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -124,14 +161,14 @@ export default function Footer() {
             <h2 className="text-lg font-bold text-white">Social</h2>
             <ul className="flex space-x-6">
               <li className="text-white hover:text-[#8DC63F] text-2xl font-semibold">
-                <Link passHref href="#">
+                <a href="#" target="_blank">
                   <FaLinkedinIn />
-                </Link>
+                </a>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-2xl font-semibold">
-                <Link passHref href="#">
+                <a href="#" target="_blank">
                   <BsTwitter />
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -147,13 +184,13 @@ export default function Footer() {
           <div className="flex justify-center w-full md:w-1/2 md:justify-end">
             <ul className="inline-flex space-x-5">
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="privacy-policy">Privacy Policy</Link>
+                <Link href="privacy-policy">Privacy Policy</Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="terms-of-use">Terms Of Use</Link>
+                <Link href="terms-of-use">Terms Of Use</Link>
               </li>
               <li className="text-white hover:text-[#8DC63F] text-base font-semibold">
-                <Link passHref href="cookie-policy">Cookie Policy</Link>
+                <Link href="cookie-policy">Cookie Policy</Link>
               </li>
             </ul>
           </div>
