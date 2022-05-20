@@ -35,8 +35,8 @@ export default function Locations(props) {
         </ul>
         <figure className="absolute -bottom-[6px] right-0">
           <Image
-            src={bar}
-            alt="images/color-bar-light.jpg"
+            src="/images/color-bar-light.jpg"
+            alt="Location "
             className="w-[55%] absolute bottom-0 right-0"
             width={300}
             height={8}
