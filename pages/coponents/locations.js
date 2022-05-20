@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import bar from '../../public/images/color-bar-light.jpg';
+
 
 export default function Locations(props) {
   return (
