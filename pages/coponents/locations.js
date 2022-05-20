@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import bar from '../../public/images/color-bar (1).jpg'
+import Image from 'next/image';
+import bar from '../../public/images/color-bar-light.jpg';
 
 export default function Locations(props) {
   return (
@@ -33,10 +33,10 @@ export default function Locations(props) {
             </a>
           </li>
         </ul>
-        <figure className='absolute -bottom-[6px] right-0'>
+        <figure className="absolute -bottom-[6px] right-0">
           <Image
             src={bar}
-            alt="images/color-bar (1).jpg"
+            alt="images/color-bar-light.jpg"
             className="w-[55%] absolute bottom-0 right-0"
             width={300}
             height={8}

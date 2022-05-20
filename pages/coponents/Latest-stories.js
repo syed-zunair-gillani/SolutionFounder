@@ -2,17 +2,15 @@ import { gql } from '@apollo/client';
 import { client } from '../../lib/apollo';
 import Link from 'next/link';
 
-
 export default function LatestStories({ posts }) {
   // console.log('latest stories****', posts);
   return (
     <>
-        <h2 className="md:text-4xl text-3xl leading-8 font-bold text-[#302E2E] text-center mb-8">
-          More Success Stories
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-[1200px] mx-auto mb-8">
-        
-          {/* {
+      <h2 className="md:text-4xl text-3xl leading-8 font-bold text-[#302E2E] text-center mb-8">
+        More Success Stories
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-[1200px] mx-auto mb-8">
+        {/* {
             posts.map((story => (
               <>
 
@@ -32,8 +30,8 @@ export default function LatestStories({ posts }) {
                   </div>
                   <div className="absolute bottom-0 right-0 flex justify-end">
                     <img
-                      src="/images/color-bar (1).jpg"
-                      alt="images/color-bar (1).jpg"
+                      src="/images/color-bar-light.jpg"
+                      alt="images/color-bar-light.jpg"
                       className="w-[55%] h-[10px]"
                     />
                   </div>
@@ -41,37 +39,31 @@ export default function LatestStories({ posts }) {
               </>
             )))
           } */}
-
-        </div>
-  
+      </div>
     </>
   );
 }
 
-
-
-
-
 export async function getStaticProps() {
   const GET_POSTS = gql`
-  query getLatestStories {
-    allSuccessStories {
-      edges {
-        node {
-          uri
-          title
+    query getLatestStories {
+      allSuccessStories {
+        edges {
+          node {
+            uri
+            title
+          }
         }
       }
     }
-  }
-`;
-const response = await client.query({
-  query: GET_POSTS,
-});
-const posts = response.data.allSuccessStories;
-return {
-  props: {
-    posts,
-  },
-};
+  `;
+  const response = await client.query({
+    query: GET_POSTS,
+  });
+  const posts = response.data.allSuccessStories;
+  return {
+    props: {
+      posts,
+    },
+  };
 }
