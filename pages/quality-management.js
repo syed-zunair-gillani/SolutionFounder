@@ -4,6 +4,10 @@ import Banner from './coponents/banner';
 import Cardnew from './coponents/card-new';
 import { BsArrowRight } from 'react-icons/bs';
 import StoryBox from './coponents/story-box';
+import LatestSuccessStories from './coponents/Latest-success-stories';
+// images 
+import icon1 from '../public/images/sales.png'
+
 
 export default function Quality_Management() {
   return (
@@ -25,16 +29,16 @@ Manage and track production part approval process (PPAP) submissions. Configure 
           FEATURES
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-7 max-w-[1200px] mx-auto mb-8">
-          <Cardnew title="Sales and Customer Services" icon="sales.png" />
-          <Cardnew title="Operations Planning" icon="sales.png" />
-          <Cardnew title="Fleet Management" icon="sales.png" />
-          <Cardnew title="Route Management" icon="sales.png" />
-          <Cardnew title="Driver Employee Management" icon="sales.png" />
-          <Cardnew title="3pl Management" icon="sales.png" />
-          <Cardnew title="Documents Management" icon="sales.png" />
+          <Cardnew title="Sales and Customer Services" icon={icon1} />
+          <Cardnew title="Operations Planning" icon={icon1} />
+          <Cardnew title="Fleet Management" icon={icon1} />
+          <Cardnew title="Route Management" icon={icon1} />
+          <Cardnew title="Driver Employee Management" icon={icon1} />
+          <Cardnew title="3pl Management" icon={icon1} />
+          <Cardnew title="Documents Management" icon={icon1} />
           <Cardnew
             title="Terminal And Storage Area Management 123"
-            icon="sales.png"
+            icon={icon1}
           />
         </div>
       </section>
@@ -57,7 +61,7 @@ Manage and track production part approval process (PPAP) submissions. Configure 
           INTEGRATED DEPARTMENTS
         </h2>
         <div className="flex md:flex-row flex-col md:space-x-10 md:space-y-0 space-x-0 space-y-8 max-w-[1200px] mx-auto">
-          <div className="md:w-1/4 w-full flex md:py-5 space-y-4 flex-col">
+          <div className="flex flex-col w-full space-y-4 md:w-1/4 md:py-5">
             <img
               src="/images/Finance.png"
               alt="Finance.png"
@@ -104,7 +108,7 @@ Manage and track production part approval process (PPAP) submissions. Configure 
               </button>
             </ul>
           </div>
-          <div className="md:w-1/4 w-full flex md:py-5 space-y-4 flex-col">
+          <div className="flex flex-col w-full space-y-4 md:w-1/4 md:py-5">
             <img
               src="/images/Finance.png"
               alt="Finance.png"
@@ -151,7 +155,7 @@ Manage and track production part approval process (PPAP) submissions. Configure 
               </button>
             </ul>
           </div>
-          <div className="md:w-1/4 w-full flex md:py-5 space-y-4 flex-col">
+          <div className="flex flex-col w-full space-y-4 md:w-1/4 md:py-5">
             <img
               src="/images/Finance.png"
               alt="Finance.png"
@@ -198,7 +202,7 @@ Manage and track production part approval process (PPAP) submissions. Configure 
               </button>
             </ul>
           </div>
-          <div className="md:w-1/4 w-full flex md:py-5 space-y-4 flex-col">
+          <div className="flex flex-col w-full space-y-4 md:w-1/4 md:py-5">
             <img
               src="/images/Finance.png"
               alt="Finance.png"
@@ -261,33 +265,7 @@ Manage and track production part approval process (PPAP) submissions. Configure 
         </div>
       </section>
 
-      <section className="py-28 px-7">
-        <h2 className="md:text-4xl text-3xl leading-8 uppercase font-bold text-[#302E2E] text-center mb-8">
-          OUR SUCCESS STORIES
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
-          <StoryBox
-            icon="Nawara-Transportation-dp.png"
-            title="Nawara Transportation"
-            description="Nawara is one of leading logistics company in Saudi Arabia with head..."
-          />
-          <StoryBox
-            icon="HamatReady.png"
-            title="Hamat Readymix"
-            description="Hamat Readymix is Manufacturing company who manufacture different type of Readymix based on customer demand"
-          />
-          <StoryBox
-            icon="Quality-Education-Holdings-dp.png"
-            title="Quality Education Holdings"
-            description="QEC was founded in the year 2001..."
-          />
-          <StoryBox
-            icon="Unifood-dp.png"
-            title="Unifood"
-            description="Unifood (National Foodstuff Manufacturing Company Limited)..."
-          />
-        </div>
-      </section>
+      <LatestSuccessStories/>
 
       <Footer />
     </>

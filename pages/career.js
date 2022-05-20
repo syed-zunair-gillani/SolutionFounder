@@ -6,7 +6,7 @@ import { gql } from '@apollo/client';
 import { client } from '../lib/apollo';
 
 export default function career({ jobs }) {
-  console.log('jobs****', jobs);
+  let counter = 1;
   return (
     <>
       <Header />
@@ -17,7 +17,7 @@ export default function career({ jobs }) {
         icon="career-banner-img.png"
       />
 
-      <section className="py-24 px-3">
+      <section className="px-3 py-24">
         <div className="grid grid-cols-1 md:grid-cols-1 gap-4 max-w-[1200px] mx-auto ">
           <h2 className="md:text-4xl text-3xl leading-8 uppercase font-bold text-[#302E2E] text-center">
             INTERESTED? WE’RE HIRING.
@@ -28,20 +28,24 @@ export default function career({ jobs }) {
           </p>
           {
             jobs.map((job => (
-              <div className="accordion grid gap-4" key={job.node.id}>
+              <div className="grid gap-4 accordion" key={job.node.id}>
                 <div className="accordion__item">
-                  <input type="checkbox" id="title1" />
-                  <label htmlFor="title1" className='hover:text-white'>
+                  <input type="checkbox" id={`title${counter}`} />
+                  <label htmlFor={`title${counter}`} className='hover:text-white'>
                     {job.node.title}
                   </label>
-                  <div id="job_content" className="content" dangerouslySetInnerHTML={{__html: job.node.content}} ></div> 
+                  <div data={counter++} id="job_content" className="content" dangerouslySetInnerHTML={{__html: job.node.content}} ></div> 
                 </div>
               </div>
+              
             )))
           }
         </div>
-      </section>
 
+
+        
+      </section>
+      
       <Footer />
     </>
   );

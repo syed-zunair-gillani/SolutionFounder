@@ -240,3 +240,12 @@
     font-weight: 600;
     margin-top: 20px;
 }
+.new_card_wrapper .bg_wrapper{
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+.cta{
+    position: absolute;
+    top: 100px;
+}

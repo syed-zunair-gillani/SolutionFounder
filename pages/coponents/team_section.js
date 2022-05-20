@@ -1,9 +1,11 @@
+import Image from 'next/image'; 
+
 export default function TeamSection() {
   return (
     <>
       <section className="">
         <div className="flex md:flex-row flex-col items-center max-w-[1200px] mx-auto md:space-x-16 space-x-0 md:space-y-0 space-y-10 md:px-6 px-3 py-16">
-          <div className="md:w-1/2 w-full items-center space-y-5">
+          <div className="items-center w-full space-y-5 md:w-1/2">
             <h2 className="md:text-4xl text-3xl leading-8 uppercase font-bold text-[#302E2E] mb-8">
               MEET OUR EXCEPTIONALLY TALENTED TEAM
             </h2>
@@ -30,11 +32,13 @@ export default function TeamSection() {
               </svg>
             </button>
           </div>
-          <div className="md:w-1/2 w-full items-baseline">
-            <img
+          <div className="items-baseline w-full md:w-1/2">
+            <Image
               src="/images/team-section.png"
               alt="team-section.png"
               className="md:float-right"
+              width={500}
+              height={470}
             />
           </div>
         </div>

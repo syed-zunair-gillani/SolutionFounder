@@ -10,7 +10,7 @@ export default function Company_Menu() {
         <ol className="space-y-2 ">
           <li className="text-black hover:text-[#8DC63F] text-base font-normal">
             <Link
-              href="../company"
+              href="/company"
               className="flex items-center"
             >
               <a className='flex items-center'>
@@ -23,7 +23,7 @@ export default function Company_Menu() {
       
           </li>
           <li className="text-black hover:text-[#8DC63F] text-base font-normal">
-            <Link href="../Career" className="flex items-center">
+            <Link href="/career" className="flex items-center">
               <a className='flex items-center'>
                 <span className="mr-3">
                   <FaUserAlt />
@@ -33,7 +33,7 @@ export default function Company_Menu() {
             </Link>
           </li>
           <li className="text-black hover:text-[#8DC63F] text-base font-normal">
-            <Link href="../contact-us" className="flex items-center">
+            <Link href="/contact-us" className="flex items-center">
               <a className='flex items-center'>
                 <span className="mr-3">
                   <AiFillMessage />

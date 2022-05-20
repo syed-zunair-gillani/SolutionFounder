@@ -1,19 +1,23 @@
 import Link from 'next/link';
+import Image from 'next/image'; 
 
 export default function StoryBox(props) {
-  console.log('props', props);
   return (
     <>
-      <div className="w-full relative flex rounded-md flex-col shadow-sh hover:shadow-shl bg-white">
+      <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
         {
-          props.imglink ? <img
+          props.imglink ? <Image
           src={props.imglink}
-          alt={`images/${props.icon}`}
+          alt={props.title}
           className=""
-          /> : <img
-          src={`images/${props.icon}`}
-          alt={`images/${props.icon}`}
+          width={100}
+          height={230}
+          /> : <Image
+          src={props.icon}
+          alt={props.title}
           className=""
+          width={100}
+          height={200}
           />
         }
         <div className="p-5 space-y-1">
@@ -24,12 +28,16 @@ export default function StoryBox(props) {
             {props.description}
           </p>
         </div>
-        <div className="flex justify-end absolute right-0 bottom-0">
-          <img
-            src="/images/color-bar (1).jpg"
-            alt="images/color-bar (1).jpg"
-            className="w-[55%] h-[10px]"
-          />
+        <div className="absolute bottom-0 right-0 flex justify-end">
+          <figure className='max-h-[18px]'>
+            <Image
+              src="/images/color-bar (1).jpg"
+              alt="images/color-bar (1).jpg"
+              className="w-[55%] h-[10px]"
+              width={155}
+              height={10}
+            />
+          </figure>
         </div>
       </div>
     </>

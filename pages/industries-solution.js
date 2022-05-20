@@ -3,9 +3,9 @@ import Footer from './coponents/footer';
 import Header from './coponents/header';
 import TabsSection from './coponents/tabs';
 import { BsArrowRight } from 'react-icons/bs';
-import StoryBox from './coponents/story-box';
-import { useState } from 'react';
-import LatestStories from './coponents/Latest-stories';
+import LatestSuccessStories from './coponents/Latest-success-stories';
+import Image from 'next/image'
+
 
 export default function IndustriesSolution() {
 
@@ -39,7 +39,7 @@ export default function IndustriesSolution() {
           INTEGRATED DEPARTMENTS
         </h2>
         <div className="flex md:flex-row flex-col md:space-x-10 md:space-y-0 space-x-0 space-y-8 max-w-[1200px] mx-auto">
-          <div className="md:w-1/4 w-full flex md:py-5 space-y-4 flex-col">
+          <div className="flex flex-col w-full space-y-4 md:w-1/4 md:py-5">
             <img
               src="/images/Finance.png"
               alt="Finance.png"
@@ -87,7 +87,7 @@ export default function IndustriesSolution() {
               </button>
             </ul>
           </div>
-          <div className="md:w-1/4 w-full flex md:py-5 space-y-4 flex-col">
+          <div className="flex flex-col w-full space-y-4 md:w-1/4 md:py-5">
             <img
               src="/images/Finance.png"
               alt="Finance.png"
@@ -134,7 +134,7 @@ export default function IndustriesSolution() {
               </button>
             </ul>
           </div>
-          <div className="md:w-1/4 w-full flex md:py-5 space-y-4 flex-col">
+          <div className="flex flex-col w-full space-y-4 md:w-1/4 md:py-5">
             <img
               src="/images/Finance.png"
               alt="Finance.png"
@@ -181,7 +181,7 @@ export default function IndustriesSolution() {
               </button>
             </ul>
           </div>
-          <div className="md:w-1/4 w-full flex md:py-5 space-y-4 flex-col">
+          <div className="flex flex-col w-full space-y-4 md:w-1/4 md:py-5">
             <img
               src="/images/Finance.png"
               alt="Finance.png"
@@ -244,35 +244,7 @@ export default function IndustriesSolution() {
         </div>
       </section>
 
-      <section className="py-24 px-7">
-        <h2 className="md:text-4xl text-3xl leading-8 uppercase font-bold text-[#302E2E] text-center mb-8">
-          OUR SUCCESS STORIES
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
-          <StoryBox
-            icon="Nawara-Transportation-dp.png"
-            title="Nawara Transportation"
-            description="Nawara is one of leading logistics company in Saudi Arabia with head..."
-          />
-          <StoryBox
-            icon="HamatReady.png"
-            title="Hamat Readymix"
-            description="Hamat Readymix is Manufacturing company who manufacture different type of Readymix based on customer demand"
-          />
-          <StoryBox
-            icon="Quality-Education-Holdings-dp.png"
-            title="Quality Education Holdings"
-            description="QEC was founded in the year 2001..."
-          />
-          <StoryBox
-            icon="Unifood-dp.png"
-            title="Unifood"
-            description="Unifood (National Foodstuff Manufacturing Company Limited)..."
-          />
-        </div>
-      </section>
-
-      {/* <LatestStories/> */}
+      <LatestSuccessStories/>
       <Footer />
     </>
   );

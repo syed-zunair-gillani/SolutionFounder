@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 
 export default function LatestStories({ posts }) {
-  console.log('latest stories****', posts);
+  // console.log('latest stories****', posts);
   return (
     <>
         <h2 className="md:text-4xl text-3xl leading-8 font-bold text-[#302E2E] text-center mb-8">

@@ -29,7 +29,7 @@ export default function SlugPage({ post }) {
         <Cardnew post={post.successStoryExtra.appFeatures}/>
       </div>
 
-      <div className='md:w-1/2 mx-auto mt-10 inner-text' 
+      <div className='mx-auto mt-10 md:w-1/2 inner-text' 
            dangerouslySetInnerHTML={{__html: post.successStoryExtra.detailContent}}>       
       </div>
         

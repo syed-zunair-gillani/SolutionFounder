@@ -55,24 +55,25 @@ export default function Header() {
       </Head>
 
       <header className="bg-[#133c6d] border-[#284D78] border-b fixed w-full z-50">
-        <div className="bg-[#133c6d] flex flex-row items-center justify-between p-6 max-w-[1200px] mx-auto">
-          <div className="md:w-1/4 w-1/2">
+        <div className="bg-[#133c6d] flex flex-row items-center justify-between  p-6 max-w-[1200px] mx-auto">
+          <div className="w-1/2 md:w-1/4">
             <Link href="/">
-              <img
+              <Image
                 src="/images/SF-White.png"
                 alt="SF-White.png"
                 className="max-w-[80%] cursor-pointer"
-                layout="fill"
+                width={225}
+                height={40}
               />
             </Link>
           </div>
-          <div className="w-auto md:block hidden">
-            <ul className="flex justify-center space-x-12 items-center">
-              <li className="inline text-white text-base font-semibold">
+          <div className="hidden w-auto md:block">
+            <ul className="flex items-center justify-center space-x-12">
+              <li className="inline text-base font-semibold text-white">
                 <Link href="/">Home</Link>
               </li>
               <li
-                className="inline text-white text-base font-semibold cursor-pointer"
+                className="inline text-base font-semibold text-white cursor-pointer"
                 onClick={HandleMegaMenu}
               >
                 <span className="flex items-center ">
@@ -89,21 +90,21 @@ export default function Header() {
                   </ul>
                 </span>
               </li>
-              <li className="inline text-white text-base font-semibold">
+              <li className="inline text-base font-semibold text-white">
                 <Link href="/industries-solution">Industries Solution</Link>
               </li>
-              <li className="inline text-white text-base font-semibold">
+              <li className="inline text-base font-semibold text-white">
                 <Link href="/success-stories">Success Stories</Link>
               </li>
-              <li className="inline text-white text-base font-semibold">
+              <li className="inline text-base font-semibold text-white">
                 <Link href="/news-updates">News & Updates</Link>
               </li>
               <li
-                className="inline text-white text-base font-semibold cursor-pointer"
+                className="inline text-base font-semibold text-white cursor-pointer"
                 onClick={HandleComp_MegaMenu}
               >
-                <span className="flex items-center relative hover-trigger">
-                  Company{' '}
+                <span className="relative flex items-center hover-trigger">
+                  Company
                   <span className="ml-1">
                     <AiOutlineDown />
                   </span>
@@ -118,10 +119,10 @@ export default function Header() {
               </li>
             </ul>
           </div>
-          <div className="w-auto md:hidden block items-center">
-            <button className="bg-white rounded-sm py-2 px-1 shadow-md">
+          <div className="items-center block w-auto md:hidden">
+            <button className="px-1 py-2 bg-white rounded-sm shadow-md">
               <svg
-                className="fill-current text-gray-900"
+                className="text-gray-900 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
