@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Mega_Menu() {
   return (
@@ -7,13 +7,18 @@ export default function Mega_Menu() {
       <div className="w-[78%] grid gap-5 p-10 pb-6">
         <div className="grid grid-cols-3 gap-7">
           <div className="items-center w-full space-y-3">
-            <Image src="/images/products.png" alt="products.png" width={40} height={40} />
+            <Image
+              src="/images/products.png"
+              alt="products.png"
+              width={40}
+              height={40}
+            />
             <h2 className="text-[#0261A3] text-base font-bold flex items-center">
               ERP Solutions
             </h2>
             <ol className="space-y-2 list-disc list-inside">
               <li className="text-black hover:text-[#8DC63F] text-sm uppercase font-normal">
-                <Link href="/transportation">Transportation</Link>
+                <Link href="/transportation">Transportation One</Link>
               </li>
               <li className="text-black hover:text-[#8DC63F] text-sm uppercase font-normal">
                 <Link href="/retail">Retail</Link>
@@ -40,7 +45,12 @@ export default function Mega_Menu() {
             </ol>
           </div>
           <div className="items-center w-full space-y-3">
-            <Image src="/images/products.png" alt="products.png" width={40} height={40}/>
+            <Image
+              src="/images/products.png"
+              alt="products.png"
+              width={40}
+              height={40}
+            />
             <h2 className="text-[#0261A3] text-base font-bold flex items-center">
               Human Capital Managment Solution
             </h2>
@@ -57,7 +67,12 @@ export default function Mega_Menu() {
             </ol>
           </div>
           <div className="items-center w-full space-y-3">
-            <Image src="/images/products.png" alt="products.png" width={40} height={40}/>
+            <Image
+              src="/images/products.png"
+              alt="products.png"
+              width={40}
+              height={40}
+            />
             <h2 className="text-[#0261A3] text-base font-bold flex items-center">
               Material Management Solution
             </h2>
@@ -78,7 +93,12 @@ export default function Mega_Menu() {
         </div>
         <div className="grid grid-cols-3 gap-3">
           <div className="items-center w-full space-y-3">
-            <Image src="/images/products.png" alt="products.png" width={40} height={40}/>
+            <Image
+              src="/images/products.png"
+              alt="products.png"
+              width={40}
+              height={40}
+            />
             <h2 className="text-[#0261A3] text-base font-bold flex items-center">
               Finance Management Solution
             </h2>
@@ -92,7 +112,12 @@ export default function Mega_Menu() {
             </ol>
           </div>
           <div className="items-center w-full space-y-3">
-            <Image src="/images/products.png" alt="products.png" width={40} height={40}/>
+            <Image
+              src="/images/products.png"
+              alt="products.png"
+              width={40}
+              height={40}
+            />
             <h2 className="text-[#0261A3] text-base font-bold flex items-center">
               Customer Experience Solution
             </h2>
