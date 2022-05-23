@@ -12,7 +12,7 @@ export default function TabsSection() {
             id="tabs"
             className="justify-between space-x-0 space-y-4 md:inline-flex md:space-x-4 md:space-y-0"
           >
-            <li className="min-w-[185px] m-0">
+            <li className="min-w-[187px] m-0">
               <a onClick={()=>setTab(1)}>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
                   <figure className="absolute top-0 left-0 rounded-md">
@@ -34,11 +34,11 @@ export default function TabsSection() {
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-             <figure className={`w-full h-2 ${tab === 1 ? 'block' : 'hidden'}`}>
-                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             <figure className={`w-full -mt-2 h-2 ${tab === 1 ? 'block' : 'hidden'}`}>
+                <Image src="/images/color-bar.jpg" alt="bottom line" width={185} height={7}/>
              </figure>
             </li>
-            <li className="min-w-[185px] m-0">
+            <li className="min-w-[187px] m-0">
               <a onClick={()=>setTab(2)}>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
                   <figure className="absolute top-0 left-0 rounded-md">
@@ -60,11 +60,11 @@ export default function TabsSection() {
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-             <figure className={`w-full h-2 ${tab === 2 ? 'block' : 'hidden'}`}>
-                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             <figure className={`w-full -mt-2 h-2 ${tab === 2 ? 'block' : 'hidden'}`}>
+                <Image src="/images/color-bar.jpg" alt="bottom line" width={185} height={7}/>
              </figure>
             </li>
-            <li className="min-w-[185px] m-0">
+            <li className="min-w-[187px] m-0">
               <a onClick={()=>setTab(3)}>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
                   <figure className="absolute top-0 left-0 rounded-md">
@@ -86,11 +86,11 @@ export default function TabsSection() {
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-             <figure className={`w-full h-2 ${tab === 3 ? 'block' : 'hidden'}`}>
-                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             <figure className={`w-full -mt-2 h-2 ${tab === 3 ? 'block' : 'hidden'}`}>
+                <Image src="/images/color-bar.jpg" alt="bottom line" width={185} height={7}/>
              </figure>
             </li>
-            <li className="min-w-[185px] m-0">
+            <li className="min-w-[187px] m-0">
               <a onClick={()=>setTab(4)}>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
                   <figure className="absolute top-0 left-0 rounded-md">
@@ -112,11 +112,11 @@ export default function TabsSection() {
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-             <figure className={`w-full h-2 ${tab === 4 ? 'block' : 'hidden'}`}>
-                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             <figure className={`w-full -mt-2 h-2 ${tab === 4 ? 'block' : 'hidden'}`}>
+                <Image src="/images/color-bar.jpg" alt="bottom line" width={185} height={7}/>
              </figure>
             </li>
-            <li className="min-w-[185px] m-0">
+            <li className="min-w-[187px] m-0">
               <a onClick={()=>setTab(5)}>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
                   <figure className="absolute top-0 left-0 rounded-md">
@@ -138,11 +138,11 @@ export default function TabsSection() {
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-             <figure className={`w-full h-2 ${tab === 5 ? 'block' : 'hidden'}`}>
-                <img src="/images/color-bar.jpg" width={185} height={5}/>
+             <figure className={`w-full -mt-2 h-2 ${tab === 5 ? 'block' : 'hidden'}`}>
+                <Image src="/images/color-bar.jpg" alt="bottom line" width={185} height={7}/>
              </figure>
             </li>
-            <li className="min-w-[185px] m-0">
+            <li className="min-w-[187px] m-0">
               <a onClick={()=>setTab(6)}>
                 <div className="relative flex flex-col items-center w-full px-6 space-y-4 bg-white rounded-md cursor-pointer justify-items-center py-11 shadow-sh hover:shadow-shl">
                   <figure className="absolute top-0 left-0 rounded-md">
@@ -164,14 +164,15 @@ export default function TabsSection() {
                   <h3 className="text-sm text-center">Project Initiation</h3>
                 </div>
               </a>
-             <figure className={`w-full h-2 ${tab === 6 ? 'block' : 'hidden'}`}>
-                <img src="/images/color-bar.jpg" width={180} height={5}/>
+             <figure className={`w-full -mt-2 h-2 ${tab === 6 ? 'block' : 'hidden'}`}>
+                <Image src="/images/color-bar.jpg" alt="bottom line" width={185} height={7}/>
              </figure>
             </li>
 
+
           </ul>
 
-          <div id="tab-contents" className="mt-[5px]">
+          <div id="tab-contents" className="mt-[10px]">
             <div id="first" className={`border-t border-black ${tab === 1 ? 'block' : 'hidden'}`}>
               <div className="flex flex-col items-center pt-5 space-y-2 md:flex-row md:space-y-0">
                 <p className="text-lg font-medium text-[#585858] md:w-4/5 w-full md:text-left text-center">

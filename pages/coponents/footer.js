@@ -20,7 +20,7 @@ export default function Footer() {
         </figure>
         <div className="max-w-[1200px] mx-auto py-10 md:px-6 px-3">
           <div className="inline-flex items-center w-1/2 md:w-1/4">
-            <Link href="/">
+            <Link passHref href="/">
               <Image
                 src="/images/SF-White.png"
                 alt="SF-White.png"
@@ -28,7 +28,7 @@ export default function Footer() {
                 height={130}
               />
             </Link>
-            <Link href="/" className="w-full ml-2">
+            <Link passHref href="/" className="w-full ml-2">
               <Image
                 src="/images/hirring.png"
                 alt="hirring.png"

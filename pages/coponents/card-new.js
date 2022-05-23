@@ -47,7 +47,7 @@ export default function Cardnew(props) {
                 alt={props.title}
                 className="w-[32%] h-[48%] mb-4"
                 width={55}
-                height={55}
+                height={50}
               />
             <h3 className="text-center box-title">{props.title}</h3>
           </div>

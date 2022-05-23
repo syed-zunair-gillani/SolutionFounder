@@ -2,7 +2,8 @@ import Header from './coponents/header';
 import Footer from './coponents/footer';
 import Banner from './coponents/banner';
 import Cardnew from './coponents/card-new';
-import StoryBox from './coponents/story-box';
+import Image from 'next/image';
+import LatestSuccessStories from './coponents/Latest-success-stories';
 
 export default function Unifood() {
   return (
@@ -17,7 +18,7 @@ export default function Unifood() {
 
       <section className="pt-14 px-7">
         <div className=" max-w-[755px] mx-auto grid gap-7">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mb-8">
+          <div className="grid grid-cols-1 mb-8 md:grid-cols-2 gap-7">
             <Cardnew title="Sales and Customer Services" icon="sales.png" />
             <Cardnew title="Operations Planning" icon="sales.png" />
             <Cardnew title="Fleet Management" icon="sales.png" />
@@ -31,7 +32,7 @@ export default function Unifood() {
             and sell them in local market through integrated sales & purchase
             modules.
           </p>
-          <img src="/images/Unifood-img.jpg" alt="Unifood-img.jpg" />
+          <Image src="/images/Unifood-img.jpg" alt="Unifood-img.jpg" width={1400} height={800} />
           <h1 className="text-2xl font-normal ">About ODOO Implementation</h1>
           <p className="text-lg font-normal text-justify text-[#535353]">
             For Khalid Stationery, Solutionfounder ERP modules include
@@ -65,33 +66,7 @@ export default function Unifood() {
         </div>
       </section>
 
-      <section className="pt-8 pb-16 px-7">
-        <h2 className="md:text-4xl text-3xl leading-8 font-bold text-[#302E2E] text-center mb-8">
-          More Success Stories
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
-          <StoryBox
-            icon="Nawara-Transportation-dp.png"
-            title="Nawara Transportation"
-            description="Nawara is one of leading logistics company in Saudi Arabia with head..."
-          />
-          <StoryBox
-            icon="HamatReady.png"
-            title="Hamat Readymix"
-            description="Hamat Readymix is Manufacturing company who manufacture different type of Readymix based on customer demand"
-          />
-          <StoryBox
-            icon="Quality-Education-Holdings-dp.png"
-            title="Quality Education Holdings"
-            description="QEC was founded in the year 2001..."
-          />
-          <StoryBox
-            icon="Unifood-dp.png"
-            title="Unifood"
-            description="Unifood (National Foodstuff Manufacturing Company Limited)..."
-          />
-        </div>
-      </section>
+      <LatestSuccessStories/>
 
       <Footer />
     </>

@@ -5,6 +5,7 @@ import StoryBox from '../coponents/story-box';
 import { gql } from '@apollo/client';
 import { client } from '../../lib/apollo';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Success_stories({ posts }) {
   return (
@@ -30,10 +31,12 @@ export default function Success_stories({ posts }) {
               /> */}
 
               <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
-                <img
+                <Image
                   src={story.node.featuredImage.node.mediaItemUrl}
                   alt="img"
                   className=""
+                  width={400}
+                  height={300}
                 />
                 <div className="p-5 space-y-1">
                   <h3 className="box-title">
@@ -44,10 +47,12 @@ export default function Success_stories({ posts }) {
                   </p>
                 </div>
                 <div className="absolute bottom-0 right-0 flex justify-end">
-                  <img
+                  <Image
                     src="/images/color-bar-light.jpg"
                     alt="images/color-bar-light.jpg"
                     className="w-[55%] h-[10px]"
+                    width={160}
+                    height={8}
                   />
                 </div>
               </div>

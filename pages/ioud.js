@@ -2,7 +2,6 @@ import Header from './coponents/header';
 import Footer from './coponents/footer';
 import Banner from './coponents/banner';
 import Cardnew from './coponents/card-new';
-import StoryBox from './coponents/story-box';
 import Image from 'next/image';
 // images 
 import icon1 from '../public/images/sales.png'
