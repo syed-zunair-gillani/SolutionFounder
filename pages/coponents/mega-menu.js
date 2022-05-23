@@ -18,7 +18,7 @@ export default function Mega_Menu() {
             </h2>
             <ol className="space-y-2 list-disc list-inside">
               <li className="text-black hover:text-[#8DC63F] text-sm uppercase font-normal">
-                <Link href="/transportation">Transportation One</Link>
+                <Link href="/transportation">Transportation</Link>
               </li>
               <li className="text-black hover:text-[#8DC63F] text-sm uppercase font-normal">
                 <Link href="/retail">Retail</Link>
