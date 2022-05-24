@@ -3,7 +3,7 @@ import StoryBox from './story-box';
 export default function BlogPost({ posts }) {
   return (
     <>
-      {posts.map((data, index) => (
+      {/* {posts.map((data, index) => (
         <StoryBox
           icon="Awarded-as-Best-Starter-Partner-in-MENA.png"
           imglink={data.featuredImage.node.mediaItemUrl}
@@ -11,7 +11,7 @@ export default function BlogPost({ posts }) {
           uri={data.uri}
           key={index}
         />
-      ))}
+      ))} */}
     </>
   );
 }
