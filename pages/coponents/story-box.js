@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function StoryBox(props) {
   return (
     <>
-      <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
+      {/* <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
         {props.imglink ? (
           <Image
             src={props.imglink}
@@ -41,7 +41,7 @@ export default function StoryBox(props) {
             />
           </figure>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
