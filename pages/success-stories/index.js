@@ -21,9 +21,12 @@ export default function Success_stories({ posts }) {
           SUCCESS STORIES
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-[1200px] mx-auto mb-8">
-          {posts.map((story) => (
+          {posts.map((story, index) => (
             <>
-              <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
+              <div
+                key={index}
+                className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl"
+              >
                 <Image
                   src={story.node.featuredImage.node.mediaItemUrl}
                   alt="img"
