@@ -1,4 +1,4 @@
-import Stories from './coponents/Stories';
+import Stories from './components/Stories';
 
 export default function HomeStories({ posts }) {
   console.warn('Posts', posts);

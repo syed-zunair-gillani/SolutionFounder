@@ -1,10 +1,10 @@
-import Banner from './coponents/banner';
-import Footer from './coponents/footer';
-import Header from './coponents/header';
-import Card from './coponents/card';
-import ImageBox from './coponents/image-box';
-import TeamSection from './coponents/team_section';
-import CTA from './coponents/cta';
+import Banner from './components/banner';
+import Footer from './components/footer';
+import Header from './components/header';
+import Card from './components/card';
+import ImageBox from './components/image-box';
+import TeamSection from './components/team_section';
+import CTA from './components/cta';
 // importing images
 import AwardWinner from '../public/images/Award-winner.png';
 import { client } from '../lib/apollo';
