@@ -1,44 +1,45 @@
 import Head from 'next/head';
 import { client } from '../../lib/apollo';
 import { gql } from '@apollo/client';
-import Header from '../coponents/header';
-import Banner from '../coponents/banner';
-import Cardnew from '../coponents/card-new';
-import LatestStories from '../coponents/Latest-stories';
+import Header from '../components/header';
+import Banner from '../components/banner';
+import Cardnew from '../components/card-new';
+import LatestStories from '../components/Latest-stories';
 
 export default function SlugPage({ post }) {
-  
   return (
     <div>
       <Head>
         {/* <title>{post.title}</title> */}
         <link rel="icon" href="favicon.ico"></link>
       </Head>
-      <Header/>
-      
-      <Banner 
-        heading={post.title} 
-        sub_heading={post.successStoryExtra.bannerSubHeading} 
+      <Header />
+
+      <Banner
+        heading={post.title}
+        sub_heading={post.successStoryExtra.bannerSubHeading}
         bannerURL={post.successStoryExtra.bannerImage.mediaItemUrl}
-
       />
-      
-      <div className='grid justify-center grid-cols-2 gap-2 p-4 mx-auto md:mt-16 md:gap-8 md:w-1/2'>
-        <Cardnew post={post.successStoryExtra.appFeatures}/>
+
+      <div className="grid justify-center grid-cols-2 gap-2 p-4 mx-auto md:mt-16 md:gap-8 md:w-1/2">
+        <Cardnew post={post.successStoryExtra.appFeatures} />
       </div>
 
-      <div className='mx-auto mt-10 md:w-1/2 inner-text' 
-           dangerouslySetInnerHTML={{__html: post.successStoryExtra.detailContent}}>       
+      <div
+        className="mx-auto mt-10 md:w-1/2 inner-text"
+        dangerouslySetInnerHTML={{
+          __html: post.successStoryExtra.detailContent,
+        }}
+      ></div>
+
+      <h2 className="my-8 font-sans text-4xl font-bold text-center md:mt-16">
+        Solution Founder Custom Apps for <br /> {post.title}
+      </h2>
+      <div className="grid justify-center grid-cols-2 gap-2 px-4 mx-auto mt-8 mb-10 lg:grid-cols-4 lg:px-48 lg:container md:mt-16 md:gap-8 md:w-1/2">
+        <Cardnew post={post.successStoryExtra.appIndustry} />
       </div>
-        
-      <h2 className='my-8 font-sans text-4xl font-bold text-center md:mt-16'>Solution Founder Custom Apps for <br/> {post.title}</h2>
-      <div className='grid justify-center grid-cols-2 gap-2 px-4 mx-auto mt-8 mb-10 lg:grid-cols-4 lg:px-48 lg:container md:mt-16 md:gap-8 md:w-1/2'>
-        <Cardnew post={post.successStoryExtra.appIndustry}/>
-      </div>
-      
 
       {/* <LatestStories/> */}
-
     </div>
   );
 }

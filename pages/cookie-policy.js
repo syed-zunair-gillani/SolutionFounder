@@ -1,6 +1,6 @@
-import Header from './coponents/header';
-import Banner from './coponents/banner';
-import Footer from './coponents/footer';
+import Header from './components/header';
+import Banner from './components/banner';
+import Footer from './components/footer';
 import { BsArrowRight } from 'react-icons/bs';
 
 export default function Cookie_policy() {

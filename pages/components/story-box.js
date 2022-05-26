@@ -6,7 +6,13 @@ export default function StoryBox(props) {
 
   return (
     <>
+<<<<<<< HEAD:pages/coponents/story-box.js
       {story ? '' : '<div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">'}
+=======
+      {story
+        ? ''
+        : '<div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">'}
+>>>>>>> 5fcfeb9c3ba2af6204e7b36306c885d23cf7f195:pages/components/story-box.js
       {props.imglink ? (
         <Image
           src={props.imglink}
@@ -17,9 +23,12 @@ export default function StoryBox(props) {
         />
       ) : (
         <>
+<<<<<<< HEAD:pages/coponents/story-box.js
           
 
 
+=======
+>>>>>>> 5fcfeb9c3ba2af6204e7b36306c885d23cf7f195:pages/components/story-box.js
           {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
             {
               story.map((item, index) => (
@@ -59,7 +68,11 @@ export default function StoryBox(props) {
           </div> */}
         </>
       )}
+<<<<<<< HEAD:pages/coponents/story-box.js
       <div className={story ? "hidden" : "block"}>
+=======
+      <div className={story ? 'hidden' : 'block'}>
+>>>>>>> 5fcfeb9c3ba2af6204e7b36306c885d23cf7f195:pages/components/story-box.js
         <div className="p-5 space-y-1">
           <h3 className="box-title">
             <Link href={`news-updates/${props.uri}`}>{props.title}</Link>

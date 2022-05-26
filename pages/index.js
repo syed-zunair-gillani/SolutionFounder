@@ -1,17 +1,17 @@
-import Banner from './coponents/banner';
-import Footer from './coponents/footer';
-import Header from './coponents/header';
-import Card from './coponents/card';
-import ImageBox from './coponents/image-box';
-import TeamSection from './coponents/team_section';
-import CTA from './coponents/cta';
+import Banner from './components/banner';
+import Footer from './components/footer';
+import Header from './components/header';
+import Card from './components/card';
+import ImageBox from './components/image-box';
+import TeamSection from './components/team_section';
+import CTA from './components/cta';
 // importing images
-import AwardWinner from '../public/images/Award-winner.png'
-import LatestSuccessStories from './coponents/Latest-success-stories';
+import AwardWinner from '../public/images/Award-winner.png';
+import { client } from '../lib/apollo';
+import { gql } from '@apollo/client';
+import HomeStories from './testing';
 
-export default function Home() {
-
- 
+export default function Home({ posts }) {
   return (
     <>
       <Header />
@@ -78,12 +78,41 @@ export default function Home() {
 
       <CTA />
 
-      <LatestSuccessStories />
-     
-      <Footer />
+      <HomeStories posts={posts} />
 
+      <Footer />
     </>
   );
 }
 
-
+export async function getStaticProps() {
+  const GET_POSTS = gql`
+    query GetAllSuccessStories {
+      allSuccessStories(first: 40) {
+        edges {
+          node {
+            title
+            uri
+            featuredImage {
+              node {
+                mediaItemUrl
+              }
+            }
+            successStoryExtra {
+              shortInfo
+            }
+          }
+        }
+      }
+    }
+  `;
+  const response = await client.query({
+    query: GET_POSTS,
+  });
+  const posts = response.data.allSuccessStories.edges;
+  return {
+    props: {
+      posts,
+    },
+  };
+}

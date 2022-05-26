@@ -1,6 +1,6 @@
-import Banner from './coponents/banner';
-import Footer from './coponents/footer';
-import Header from './coponents/header';
+import Banner from './components/banner';
+import Footer from './components/footer';
+import Header from './components/header';
 import { BsArrowRight } from 'react-icons/bs';
 import { gql } from '@apollo/client';
 import { client } from '../lib/apollo';
@@ -26,26 +26,25 @@ export default function career({ jobs }) {
             We’re always searching for amazing people to join our team. Take a
             look at our current openings.
           </p>
-          {
-            jobs.map((job => (
-              <div className="grid gap-4 accordion" key={job.node.id}>
-                <div className="accordion__item">
-                  <input type="checkbox" id={`title${counter}`} />
-                  <label htmlFor={`title${counter}`} className='hover:text-white'>
-                    {job.node.title}
-                  </label>
-                  <div data={counter++} id="job_content" className="content" dangerouslySetInnerHTML={{__html: job.node.content}} ></div> 
-                </div>
+          {jobs.map((job) => (
+            <div className="grid gap-4 accordion" key={job.node.id}>
+              <div className="accordion__item">
+                <input type="checkbox" id={`title${counter}`} />
+                <label htmlFor={`title${counter}`} className="hover:text-white">
+                  {job.node.title}
+                </label>
+                <div
+                  data={counter++}
+                  id="job_content"
+                  className="content"
+                  dangerouslySetInnerHTML={{ __html: job.node.content }}
+                ></div>
               </div>
-              
-            )))
-          }
+            </div>
+          ))}
         </div>
-
-
-        
       </section>
-      
+
       <Footer />
     </>
   );

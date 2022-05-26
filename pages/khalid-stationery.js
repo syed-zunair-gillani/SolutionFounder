@@ -1,12 +1,12 @@
-import Header from './coponents/header';
-import Footer from './coponents/footer';
-import Banner from './coponents/banner';
-import Cardnew from './coponents/card-new';
-import StoryBox from './coponents/story-box';
+import Header from './components/header';
+import Footer from './components/footer';
+import Banner from './components/banner';
+import Cardnew from './components/card-new';
+import StoryBox from './components/story-box';
 import Image from 'next/image';
-// images 
-import icon1 from '../public/images/sales.png'
-import LatestSuccessStories from './coponents/Latest-success-stories';
+// images
+import icon1 from '../public/images/sales.png';
+import LatestSuccessStories from './components/Latest-success-stories';
 
 export default function Khalid_Stationery() {
   return (
@@ -35,7 +35,12 @@ export default function Khalid_Stationery() {
             and sell them in local market through integrated sales & purchase
             modules.
           </p>
-          <Image src="/images/Khalid-S-C.png" alt="Khalid-S-C.png" width={1400} height={800} />
+          <Image
+            src="/images/Khalid-S-C.png"
+            alt="Khalid-S-C.png"
+            width={1400}
+            height={800}
+          />
           <h1 className="text-2xl font-normal ">About ODOO Implementation</h1>
           <p className="text-lg font-normal text-justify text-[#535353]">
             For Khalid Stationery, Solutionfounder ERP modules include
@@ -62,14 +67,11 @@ export default function Khalid_Stationery() {
           <Cardnew title="Driver Employee Management" icon={icon1} />
           <Cardnew title="3pl Management" icon={icon1} />
           <Cardnew title="Documents Management" icon={icon1} />
-          <Cardnew
-            title="Terminal And Storage Area Management"
-            icon={icon1}
-          />
+          <Cardnew title="Terminal And Storage Area Management" icon={icon1} />
         </div>
       </section>
 
-      <LatestSuccessStories/>
+      <LatestSuccessStories />
 
       <Footer />
     </>

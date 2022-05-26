@@ -1,7 +1,7 @@
-import Banner from './coponents/banner';
-import Header from './coponents/header';
+import Banner from './components/banner';
+import Header from './components/header';
 import { BsArrowRight } from 'react-icons/bs';
-import Footer from './coponents/footer';
+import Footer from './components/footer';
 
 export default function Privacy_policy() {
   return (
