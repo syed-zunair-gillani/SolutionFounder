@@ -2,77 +2,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function StoryBox(props) {
-  const story = props.storydata;
 
   return (
     <>
-<<<<<<< HEAD:pages/coponents/story-box.js
-      {story ? '' : '<div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">'}
-=======
-      {story
-        ? ''
-        : '<div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">'}
->>>>>>> 5fcfeb9c3ba2af6204e7b36306c885d23cf7f195:pages/components/story-box.js
-      {props.imglink ? (
-        <Image
-          src={props.imglink}
-          alt={props.title}
-          className=""
-          width={500}
-          height={350}
-        />
-      ) : (
-        <>
-<<<<<<< HEAD:pages/coponents/story-box.js
-          
+      <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
+        {props.imglink ? (
+          <Image
+            src={props.imglink}
+            alt={props.title}
+            className=""
+            width={500}
+            height={350}
+          />
+        ) : ''
+        }
 
-
-=======
->>>>>>> 5fcfeb9c3ba2af6204e7b36306c885d23cf7f195:pages/components/story-box.js
-          {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
-            {
-              story.map((item, index) => (
-                <div key={index} className='flex flex-col'>
-                  <Image
-                    src={item.node.featuredImage.node.mediaItemUrl}
-                    alt={item.node.title}
-                    className=""
-                    width={500}
-                    height={350}
-                  />
-                  <div className='relative p-1 shadow-sm'>
-                    <div className="p-5 space-y-1">
-                      <h3 className="box-title">
-                        <Link href={item.node.uri}>{item.node.title}</Link>
-                      </h3>
-                      <p className="text-base font-medium text-[#535353]">
-                        {item.node.successStoryExtra.shortInfo}
-                      </p>
-                    </div>
-                    <div className="absolute bottom-0 right-0 flex justify-end">
-                      <figure className="max-h-[18px]">
-                        <Image
-                          src="/images/color-bar-light.jpg"
-                          alt="images/color-bar-light.jpg"
-                          className="w-[55%] h-[10px]"
-                          width={155}
-                          height={8}
-                        />
-                      </figure>
-                    </div>
-                  </div>
-
-                </div>
-              ))
-            }
-          </div> */}
-        </>
-      )}
-<<<<<<< HEAD:pages/coponents/story-box.js
-      <div className={story ? "hidden" : "block"}>
-=======
-      <div className={story ? 'hidden' : 'block'}>
->>>>>>> 5fcfeb9c3ba2af6204e7b36306c885d23cf7f195:pages/components/story-box.js
         <div className="p-5 space-y-1">
           <h3 className="box-title">
             <Link href={`news-updates/${props.uri}`}>{props.title}</Link>
@@ -93,7 +37,6 @@ export default function StoryBox(props) {
           </figure>
         </div>
       </div>
-      {story ? '' : '</div>'}
     </>
   );
 }
