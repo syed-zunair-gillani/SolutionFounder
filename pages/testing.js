@@ -1,7 +1,7 @@
 import Stories from './components/Stories';
 
 export default function HomeStories({ posts }) {
-  console.warn('Posts', posts);
+
   return (
     <>
       <div className="grid">
