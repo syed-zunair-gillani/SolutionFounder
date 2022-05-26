@@ -3,8 +3,7 @@ import Image from 'next/image';
 
 export default function StoryBox(props) {
   const story = props.storydata;
-  // const sliceData = story.slice(0, 4);
-  // console.log("story-box", props.storydata);
+
   return (
     <>
       {story ? '' : '<div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">'}
