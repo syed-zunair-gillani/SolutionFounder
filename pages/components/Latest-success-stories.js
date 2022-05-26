@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function LatestSuccessStories() {
 
   const [querydata, setQueryData] = useState();
-  console.log('LatestSuccessStories', querydata);
+
 
   useEffect(() => {
     const axios = require("axios")

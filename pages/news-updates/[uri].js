@@ -5,16 +5,17 @@ import Header from '../components/header';
 import Banner from '../components/banner';
 
 export default function SlugPage({ post }) {
+  console.log('banner', post);
   return (
     <div>
       <Head>
-        <title>{post.title}</title>
+        
         <link rel="icon" href="favicon.ico"></link>
       </Head>
       <Header />
       <Banner
         heading="SOLUTION FOUNDER NEWS CENTERSOLUTION FOUNDER HAS WON THE AWARD 2019"
-        imgurl={post.featuredImage.node.mediaItemUrl}
+        imgurl={post.postExtra.bannerImage}
       />
       <main>
         <p>{post.title}</p>
@@ -32,6 +33,11 @@ const GET_POST = gql`
       content
       featuredImage {
         node {
+          mediaItemUrl
+        }
+      }
+      postExtra {
+        bannerImage {
           mediaItemUrl
         }
       }
