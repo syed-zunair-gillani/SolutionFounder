@@ -1,39 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import bar from '../../public/images/color-bar-light.jpg'
 
 export default function StoryBox(props) {
-<<<<<<< HEAD
+  const story = props.storydata;
+
   return (
     <>
-      <div
-        kay={props.title}
-        className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl"
-      >
-        {props.imglink ? (
-          <Image
-            src={props.imglink}
-            alt={props.title}
-            className=""
-            width={500}
-            height={350}
-          />
-        ) : (
-          <Image
-            src={props.icon}
-            alt={props.title}
-            className=""
-            width={500}
-            height={350}
-          />
-        )}
-=======
-  let story = props.storydata.allSuccessStories.edges;
-  let sliceData = story.slice(0, 4);
-  console.log("story-box", sliceData);
-  return (
-    <>
-      {sliceData ? '' : '<div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">'}
+      {story
+        ? ''
+        : '<div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">'}
       {props.imglink ? (
         <Image
           src={props.imglink}
@@ -44,9 +19,9 @@ export default function StoryBox(props) {
         />
       ) : (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
             {
-              sliceData.map((item, index) => (
+              story.map((item, index) => (
                 <div key={index} className='flex flex-col'>
                   <Image
                     src={item.node.featuredImage.node.mediaItemUrl}
@@ -80,11 +55,10 @@ export default function StoryBox(props) {
                 </div>
               ))
             }
-          </div>
+          </div> */}
         </>
       )}
-      <div className={sliceData ? "hidden" : "block"}>
->>>>>>> 198f6a1638a8914910a32218cd7e9d995f8fc813
+      <div className={story ? 'hidden' : 'block'}>
         <div className="p-5 space-y-1">
           <h3 className="box-title">
             <Link href={`news-updates/${props.uri}`}>{props.title}</Link>
@@ -105,7 +79,7 @@ export default function StoryBox(props) {
           </figure>
         </div>
       </div>
-      {sliceData ? '' : '</div>'}
+      {story ? '' : '</div>'}
     </>
   );
 }

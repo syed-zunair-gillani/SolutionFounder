@@ -1,137 +1,86 @@
-<<<<<<< HEAD
-import post1 from '../../public/images/Nawara-Transportation-dp.png';
-import post2 from '../../public/images/HamatReady.png';
-import post3 from '../../public/images/Quality-Education-Holdings-dp.png';
-import post4 from '../../public/images/Unifood-dp.png';
-import StoryBox from './story-box';
-import { gql } from '@apollo/client';
-import { client } from '../../lib/apollo';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-export default function LatestSuccessStories({ posts }) {
+export default function LatestSuccessStories() {
+  const [querydata, setQueryData] = useState();
+
+  useEffect(() => {
+    const axios = require('axios');
+    axios({
+      url: 'https://solutionfounder.com/graphql',
+      method: 'post',
+      data: {
+        query: `
+      query  GetAllSuccessStories {
+        allSuccessStories(first: 4) {
+          edges {
+            node {
+              title
+              uri
+              featuredImage {
+                node {
+                  mediaItemUrl
+                }
+              }
+              successStoryExtra {
+                shortInfo
+              }
+            }
+          }
+        }
+      }
+      `,
+      },
+    }).then((result) => {
+      const responseReslt = result.data.data.allSuccessStories.edges;
+      setQueryData(responseReslt);
+    });
+  }, []);
+
   return (
     <>
       <section className="py-28 px-7">
         <h2 className="md:text-4xl text-3xl leading-8 uppercase font-bold text-[#302E2E] text-center mb-8">
           OUR SUCCESS STORIES
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
-          {posts.map((story) => (
-            <>
-              <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
-                <Image
-                  src={story.node.featuredImage.node.mediaItemUrl}
-                  alt="img"
-                  className=""
-                  width={400}
-                  height={300}
-                />
+          {querydata?.map((item, index) => (
+            <div key={index} className="flex flex-col">
+              <Image
+                src={item.node.featuredImage.node.mediaItemUrl}
+                alt={item.node.title}
+                className=""
+                width={500}
+                height={350}
+              />
+              <div className="relative p-1 shadow-sm">
                 <div className="p-5 space-y-1">
                   <h3 className="box-title">
-                    <Link href={story.node.uri}>{story.node.title}</Link>
+                    <Link href={item.node.uri}>{item.node.title}</Link>
                   </h3>
-                  <p className="text-base font-medium text-[#535353]"></p>
+                  <p className="text-base font-medium text-[#535353]">
+                    {item.node.successStoryExtra.shortInfo}
+                  </p>
                 </div>
                 <div className="absolute bottom-0 right-0 flex justify-end">
-                  <Image
-                    src="/images/color-bar-light.jpg"
-                    alt="images/color-bar-light.jpg"
-                    className="w-[55%] h-[10px]"
-                    width={160}
-                    height={8}
-                  />
+                  <figure className="max-h-[18px]">
+                    <Image
+                      src="/images/color-bar-light.jpg"
+                      alt="images/color-bar-light.jpg"
+                      className="w-[55%] h-[10px]"
+                      width={155}
+                      height={8}
+                    />
+                  </figure>
                 </div>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </section>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const GET_POSTS = gql`
-    query GetAllSuccessStories {
-      allSuccessStories(first: 40) {
-        edges {
-          node {
-            title
-            uri
-            featuredImage {
-              node {
-                mediaItemUrl
-              }
-            }
-            successStoryExtra {
-              shortInfo
-            }
-          }
-        }
-      }
-    }
-  `;
-  const response = await client.query({
-    query: GET_POSTS,
-  });
-  const posts = response.data.allSuccessStories.edges;
-  return {
-    props: {
-      posts,
-    },
-  };
-=======
-import post1 from "../../public/images/Nawara-Transportation-dp.png";
-import post2 from "../../public/images/HamatReady.png";
-import post3 from "../../public/images/Quality-Education-Holdings-dp.png";
-import post4 from "../../public/images/Unifood-dp.png";
-import StoryBox from "./story-box";
-import useSWR from "swr";
-import { request } from 'graphql-request'
-import { useEffect, useState } from "react";
-
-const fetcher = query => request('https://solutionfounder.com/graphql', query)
-
-export default function LatestSuccessStories() {
-
-    const { data, error } = useSWR(
-        `{
-            allSuccessStories(first: 40) {
-                edges {
-                  node {
-                    title
-                    uri
-                    featuredImage {
-                      node {
-                        mediaItemUrl
-                      }
-                    }
-                    successStoryExtra {
-                      shortInfo
-                    }
-                  }
-                }
-              }
-        }`,
-        fetcher
-      )
-
-
-    return (
-        <>
-            <section className="py-28 px-7">
-                <h2 className="md:text-4xl text-3xl leading-8 uppercase font-bold text-[#302E2E] text-center mb-8">
-                    OUR SUCCESS STORIES
-                </h2>
-                
-                    <StoryBox
-                        storydata = {data}
-                        icon={post1}
-                        title="Nawara Transportation"
-                        description="Nawara is one of leading logistics company in Saudi Arabia with head..."
-                    />
-          
-            </section>
-        </>
-    );
->>>>>>> 198f6a1638a8914910a32218cd7e9d995f8fc813
 }
