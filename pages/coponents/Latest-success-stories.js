@@ -1,54 +1,95 @@
-import post1 from "../../public/images/Nawara-Transportation-dp.png";
-import post2 from "../../public/images/HamatReady.png";
-import post3 from "../../public/images/Quality-Education-Holdings-dp.png";
-import post4 from "../../public/images/Unifood-dp.png";
-import StoryBox from "./story-box";
-import useSWR from "swr";
-import { request } from 'graphql-request'
-import { useEffect, useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import Link from 'next/link';
+import Image from 'next/image';
 
-const fetcher = query => request('https://solutionfounder.com/graphql', query)
 
 export default function LatestSuccessStories() {
 
-    const { data, error } = useSWR(
-        `{
-            allSuccessStories(first: 40) {
-                edges {
-                  node {
-                    title
-                    uri
-                    featuredImage {
-                      node {
-                        mediaItemUrl
-                      }
-                    }
-                    successStoryExtra {
-                      shortInfo
-                    }
-                  }
+  const [querydata, setQueryData] = useState();
+  console.log('LatestSuccessStories', querydata);
+
+  useEffect(() => {
+    const axios = require("axios")
+    axios({
+      url: 'https://solutionfounder.com/graphql',
+      method: 'post',
+      data: {
+        query: `
+      query  GetAllSuccessStories {
+        allSuccessStories(first: 4) {
+          edges {
+            node {
+              title
+              uri
+              featuredImage {
+                node {
+                  mediaItemUrl
                 }
               }
-        }`,
-        fetcher
-      )
+              successStoryExtra {
+                shortInfo
+              }
+            }
+          }
+        }
+      }
+      `
+      }
+    }).then((result) => {
+      const responseReslt = result.data.data.allSuccessStories.edges;
+      setQueryData(responseReslt);
+    });
+  }, []);
 
 
-    return (
-        <>
-            <section className="py-28 px-7">
-                <h2 className="md:text-4xl text-3xl leading-8 uppercase font-bold text-[#302E2E] text-center mb-8">
-                    OUR SUCCESS STORIES
-                </h2>
-                
-                    <StoryBox
-                        storydata = {data}
-                        icon={post1}
-                        title="Nawara Transportation"
-                        description="Nawara is one of leading logistics company in Saudi Arabia with head..."
-                    />
-          
-            </section>
-        </>
-    );
+  return (
+    
+    <>
+      <section className="py-28 px-7">
+        <h2 className="md:text-4xl text-3xl leading-8 uppercase font-bold text-[#302E2E] text-center mb-8">
+          OUR SUCCESS STORIES
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
+            {
+              querydata?.map((item, index) => (
+                <div key={index} className='flex flex-col'>
+                  <Image
+                    src={item.node.featuredImage.node.mediaItemUrl}
+                    alt={item.node.title}
+                    className=""
+                    width={500}
+                    height={350}
+                  />
+                  <div className='relative p-1 shadow-sm'>
+                    <div className="p-5 space-y-1">
+                      <h3 className="box-title">
+                        <Link href={item.node.uri}>{item.node.title}</Link>
+                      </h3>
+                      <p className="text-base font-medium text-[#535353]">
+                        {item.node.successStoryExtra.shortInfo}
+                      </p>
+                    </div>
+                    <div className="absolute bottom-0 right-0 flex justify-end">
+                      <figure className="max-h-[18px]">
+                        <Image
+                          src="/images/color-bar-light.jpg"
+                          alt="images/color-bar-light.jpg"
+                          className="w-[55%] h-[10px]"
+                          width={155}
+                          height={8}
+                        />
+                      </figure>
+                    </div>
+                  </div>
+
+                </div>
+              ))
+            }
+          </div>
+
+      </section>
+    </>
+  );
 }

@@ -1,14 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import bar from '../../public/images/color-bar-light.jpg'
 
 export default function StoryBox(props) {
-  let story = props.storydata.allSuccessStories.edges;
-  let sliceData = story.slice(0, 4);
-  console.log("story-box", sliceData);
+  const story = props.storydata;
+  // const sliceData = story.slice(0, 4);
+  // console.log("story-box", props.storydata);
   return (
     <>
-      {sliceData ? '' : '<div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">'}
+      {story ? '' : '<div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">'}
       {props.imglink ? (
         <Image
           src={props.imglink}
@@ -19,9 +18,12 @@ export default function StoryBox(props) {
         />
       ) : (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
+          
+
+
+          {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
             {
-              sliceData.map((item, index) => (
+              story.map((item, index) => (
                 <div key={index} className='flex flex-col'>
                   <Image
                     src={item.node.featuredImage.node.mediaItemUrl}
@@ -55,10 +57,10 @@ export default function StoryBox(props) {
                 </div>
               ))
             }
-          </div>
+          </div> */}
         </>
       )}
-      <div className={sliceData ? "hidden" : "block"}>
+      <div className={story ? "hidden" : "block"}>
         <div className="p-5 space-y-1">
           <h3 className="box-title">
             <Link href={`news-updates/${props.uri}`}>{props.title}</Link>
@@ -79,7 +81,7 @@ export default function StoryBox(props) {
           </figure>
         </div>
       </div>
-      {sliceData ? '' : '</div>'}
+      {story ? '' : '</div>'}
     </>
   );
 }
