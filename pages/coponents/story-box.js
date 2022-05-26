@@ -22,7 +22,7 @@ export default function StoryBox(props) {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
             {
               sliceData.map((item, index) => (
-                <div className='flex flex-col'>
+                <div key={index} className='flex flex-col'>
                   <Image
                     src={item.node.featuredImage.node.mediaItemUrl}
                     alt={item.node.title}

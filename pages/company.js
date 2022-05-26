@@ -346,7 +346,7 @@ export default function Company({ team }) {
                 </div>
             </section>
 
-            <LatestSuccessStories />
+            {/* <LatestSuccessStories /> */}
 
             <Footer />
         </>
