@@ -1,6 +1,6 @@
-import Banner from '../coponents/banner';
-import Footer from '../coponents/footer';
-import Header from '../coponents/header';
+import Banner from '../components/banner';
+import Footer from '../components/footer';
+import Header from '../components/header';
 import { gql } from '@apollo/client';
 import { client } from '../../lib/apollo';
 import Link from 'next/link';

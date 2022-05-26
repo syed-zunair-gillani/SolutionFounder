@@ -1,9 +1,9 @@
-import Banner from './coponents/banner';
-import Contact_form from './coponents/contact-form';
-import Footer from './coponents/footer';
-import Header from './coponents/header';
-import LatestSuccessStories from './coponents/Latest-success-stories';
-import Locations from './coponents/locations';
+import Banner from './components/banner';
+import Contact_form from './components/contact-form';
+import Footer from './components/footer';
+import Header from './components/header';
+import LatestSuccessStories from './components/Latest-success-stories';
+import Locations from './components/locations';
 
 export default function Contact_us() {
   return (

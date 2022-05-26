@@ -1,12 +1,11 @@
-import Header from './coponents/header';
-import Footer from './coponents/footer';
-import Banner from './coponents/banner';
-import Cardnew from './coponents/card-new';
-import IntrustedDepartment from './coponents/intrusted-department';
-import LatestSuccessStories from './coponents/Latest-success-stories';
-// images 
-import icon1 from '../public/images/sales.png'
-
+import Header from './components/header';
+import Footer from './components/footer';
+import Banner from './components/banner';
+import Cardnew from './components/card-new';
+import IntrustedDepartment from './components/intrusted-department';
+import LatestSuccessStories from './components/Latest-success-stories';
+// images
+import icon1 from '../public/images/sales.png';
 
 export default function Quality_Management() {
   return (
@@ -42,9 +41,9 @@ Manage and track production part approval process (PPAP) submissions. Configure 
         </div>
       </section>
 
-      <IntrustedDepartment/>
+      <IntrustedDepartment />
 
-      <LatestSuccessStories/>
+      <LatestSuccessStories />
 
       <Footer />
     </>

@@ -1,9 +1,9 @@
-import Banner from './coponents/banner';
-import Footer from './coponents/footer';
-import Header from './coponents/header';
-import TabsSection from './coponents/tabs';
-import LatestSuccessStories from './coponents/Latest-success-stories';
-import IntrustedDepartment from './coponents/intrusted-department';
+import Banner from './components/banner';
+import Footer from './components/footer';
+import Header from './components/header';
+import TabsSection from './components/tabs';
+import LatestSuccessStories from './components/Latest-success-stories';
+import IntrustedDepartment from './components/intrusted-department';
 
 
 export default function IndustriesSolution() {

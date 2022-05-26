@@ -1,12 +1,11 @@
-import Banner from '../coponents/banner';
-import BlogPost from '../coponents/blogpost';
-import Footer from '../coponents/footer';
-import Header from '../coponents/header';
+import Banner from '../components/banner';
+import BlogPost from '../components/blogpost';
+import Footer from '../components/footer';
+import Header from '../components/header';
 import { client } from '../../lib/apollo';
 import { gql } from '@apollo/client';
 
-
-export default function News_updates({posts}) {
+export default function News_updates({ posts }) {
   return (
     <>
       <Header />
@@ -17,15 +16,13 @@ export default function News_updates({posts}) {
           News & Update
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[1200px] mx-auto mb-8">
-          <BlogPost posts = {posts}/>
+          <BlogPost posts={posts} />
         </div>
       </section>
       <Footer />
     </>
   );
 }
-
-
 
 export async function getStaticProps() {
   const GET_POSTS = gql`

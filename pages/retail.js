@@ -1,20 +1,18 @@
-import Footer from './coponents/footer';
-import Banner from './coponents/banner';
-import Cardnew from './coponents/card-new';
+import Footer from './components/footer';
+import Banner from './components/banner';
+import Cardnew from './components/card-new';
 import { BsArrowRight } from 'react-icons/bs';
-import Header from './coponents/header';
-import LatestSuccessStories from './coponents/Latest-success-stories';
+import Header from './components/header';
+import LatestSuccessStories from './components/Latest-success-stories';
 // images
-import icon1 from '../public/images/sales.png'
-import IntrustedDepartment from './coponents/intrusted-department';
-
-
+import icon1 from '../public/images/sales.png';
+import IntrustedDepartment from './components/intrusted-department';
 
 export default function Retail() {
   return (
     <>
-      <Header/>
-      
+      <Header />
+
       <Banner
         heading="RETAIL MANAGEMENT SYSTEM​"
         sub_heading="Solution Founder’s Industrial Maintenance Management System is designed to manage all Operational activities. Give full visibility of business and allow you to grow in controlled and secure manner."
@@ -33,15 +31,12 @@ export default function Retail() {
           <Cardnew title="Driver Employee Management" icon={icon1} />
           <Cardnew title="3pl Management" icon={icon1} />
           <Cardnew title="Documents Management" icon={icon1} />
-          <Cardnew
-            title="Terminal And Storage Area Management"
-            icon={icon1}
-          />
+          <Cardnew title="Terminal And Storage Area Management" icon={icon1} />
         </div>
       </section>
 
-      <IntrustedDepartment/>
-      <LatestSuccessStories/>
+      <IntrustedDepartment />
+      <LatestSuccessStories />
       <Footer />
     </>
   );

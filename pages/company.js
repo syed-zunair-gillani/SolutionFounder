@@ -1,11 +1,11 @@
-import Banner from './coponents/banner';
-import Cardnew from './coponents/card-new';
-import Footer from './coponents/footer';
-import Header from './coponents/header';
-import Team from './coponents/team';
+import Banner from './components/banner';
+import Cardnew from './components/card-new';
+import Footer from './components/footer';
+import Header from './components/header';
+import Team from './components/team';
 import { useState } from 'react';
 import React from 'react';
-import LatestSuccessStories from './coponents/Latest-success-stories';
+import LatestSuccessStories from './components/Latest-success-stories';
 import Image from 'next/image';
 import { gql } from '@apollo/client';
 import { client } from '../lib/apollo';

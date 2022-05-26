@@ -1,19 +1,21 @@
 import Head from 'next/head';
 import { client } from '../../lib/apollo';
 import { gql } from '@apollo/client';
-import Header from '../coponents/header';
-import Banner from '../coponents/banner';
+import Header from '../components/header';
+import Banner from '../components/banner';
 
 export default function SlugPage({ post }) {
-
   return (
     <div>
       <Head>
         <title>{post.title}</title>
         <link rel="icon" href="favicon.ico"></link>
       </Head>
-      <Header/>
-      <Banner heading="SOLUTION FOUNDER NEWS CENTERSOLUTION FOUNDER HAS WON THE AWARD 2019" imgurl={post.featuredImage.node.mediaItemUrl} />
+      <Header />
+      <Banner
+        heading="SOLUTION FOUNDER NEWS CENTERSOLUTION FOUNDER HAS WON THE AWARD 2019"
+        imgurl={post.featuredImage.node.mediaItemUrl}
+      />
       <main>
         <p>{post.title}</p>
         <article dangerouslySetInnerHTML={{ __html: post.content }}></article>

@@ -1,11 +1,11 @@
-import Header from './coponents/header';
-import Footer from './coponents/footer';
-import Banner from './coponents/banner';
-import Cardnew from './coponents/card-new';
+import Header from './components/header';
+import Footer from './components/footer';
+import Banner from './components/banner';
+import Cardnew from './components/card-new';
 import Image from 'next/image';
 // images 
 import icon1 from '../public/images/sales.png'
-import LatestSuccessStories from './coponents/Latest-success-stories';
+import LatestSuccessStories from './components/Latest-success-stories';
 
 export default function Emdad_Logistics() {
   return (
