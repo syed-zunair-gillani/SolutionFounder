@@ -17,7 +17,7 @@ import microsoft from '../public/images/micro-dark.png';
 
 export default function Company({ team }) {
     const [tab, setTab] = React.useState(1);
-    console.log('team****', team);
+
     
     return (
         <>

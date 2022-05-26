@@ -9,8 +9,9 @@ import CTA from './coponents/cta';
 import AwardWinner from '../public/images/Award-winner.png'
 import LatestSuccessStories from './coponents/Latest-success-stories';
 
-
 export default function Home() {
+
+ 
   return (
     <>
       <Header />
@@ -77,10 +78,12 @@ export default function Home() {
 
       <CTA />
 
-      <LatestSuccessStories/>
-
+      <LatestSuccessStories />
+     
       <Footer />
-      
+
     </>
   );
 }
+
+

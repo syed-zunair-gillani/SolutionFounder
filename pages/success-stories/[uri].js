@@ -7,9 +7,7 @@ import Cardnew from '../coponents/card-new';
 import LatestStories from '../coponents/Latest-stories';
 
 export default function SlugPage({ post }) {
-  // console.log('success stories***', post.successStoryExtra);
-  // const appFeature = post.successStoryExtra.appFeatures;
-  // const appIndustry = post.successStoryExtra.appIndustry;
+  
   return (
     <div>
       <Head>
