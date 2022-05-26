@@ -11,7 +11,13 @@ import { client } from '../lib/apollo';
 import { gql } from '@apollo/client';
 import HomeStories from './testing';
 
+<<<<<<< HEAD
 export default function Home({ posts }) {
+=======
+export default function Home() {
+
+ 
+>>>>>>> 198f6a1638a8914910a32218cd7e9d995f8fc813
   return (
     <>
       <Header />
@@ -78,13 +84,21 @@ export default function Home({ posts }) {
 
       <CTA />
 
+<<<<<<< HEAD
       <HomeStories posts={posts} />
 
       <Footer />
+=======
+      <LatestSuccessStories />
+     
+      <Footer />
+
+>>>>>>> 198f6a1638a8914910a32218cd7e9d995f8fc813
     </>
   );
 }
 
+<<<<<<< HEAD
 export async function getStaticProps() {
   const GET_POSTS = gql`
     query GetAllSuccessStories {
@@ -116,3 +130,6 @@ export async function getStaticProps() {
     },
   };
 }
+=======
+
+>>>>>>> 198f6a1638a8914910a32218cd7e9d995f8fc813
