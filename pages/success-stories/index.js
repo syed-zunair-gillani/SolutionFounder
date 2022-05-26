@@ -1,7 +1,6 @@
 import Banner from '../coponents/banner';
 import Footer from '../coponents/footer';
 import Header from '../coponents/header';
-import StoryBox from '../coponents/story-box';
 import { gql } from '@apollo/client';
 import { client } from '../../lib/apollo';
 import Link from 'next/link';
@@ -24,12 +23,6 @@ export default function Success_stories({ posts }) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-[1200px] mx-auto mb-8">
           {posts.map((story) => (
             <>
-              {/* <StoryBox
-                imglink={story.node.featuredImage.node.mediaItemUrl}
-                title={story.node.title}
-                description={story.node.successStoryExtra.shortInfo}
-              /> */}
-
               <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
                 <Image
                   src={story.node.featuredImage.node.mediaItemUrl}

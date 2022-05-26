@@ -6,11 +6,12 @@ import ImageBox from './coponents/image-box';
 import TeamSection from './coponents/team_section';
 import CTA from './coponents/cta';
 // importing images
-import AwardWinner from '../public/images/Award-winner.png'
-import LatestSuccessStories from './coponents/Latest-success-stories';
+import AwardWinner from '../public/images/Award-winner.png';
+import { client } from '../lib/apollo';
+import { gql } from '@apollo/client';
+import HomeStories from './testing';
 
-
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <Header />
@@ -77,10 +78,41 @@ export default function Home() {
 
       <CTA />
 
-      <LatestSuccessStories/>
+      <HomeStories posts={posts} />
 
       <Footer />
-      
     </>
   );
+}
+
+export async function getStaticProps() {
+  const GET_POSTS = gql`
+    query GetAllSuccessStories {
+      allSuccessStories(first: 40) {
+        edges {
+          node {
+            title
+            uri
+            featuredImage {
+              node {
+                mediaItemUrl
+              }
+            }
+            successStoryExtra {
+              shortInfo
+            }
+          }
+        }
+      }
+    }
+  `;
+  const response = await client.query({
+    query: GET_POSTS,
+  });
+  const posts = response.data.allSuccessStories.edges;
+  return {
+    props: {
+      posts,
+    },
+  };
 }
