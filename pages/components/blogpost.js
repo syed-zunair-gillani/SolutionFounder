@@ -5,13 +5,12 @@ export default function BlogPost({ posts }) {
   console.warn(posts);
   return (
     <>
-      {posts.map((data, index) => (
+      {/* {posts.map((data, index) => (
         <div key={index}>
           <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
             <Image
               src={data.featuredImage.node.mediaItemUrl}
               alt={data.title}
-              className=""
               width={500}
               height={350}
             />
@@ -34,7 +33,7 @@ export default function BlogPost({ posts }) {
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
     </>
   );
 }
