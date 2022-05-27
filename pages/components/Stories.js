@@ -9,9 +9,7 @@ export default function PostCard({ post }) {
         <div className="p-5 space-y-1">
           <h3 className="box-title">
             {/* <Link href={`stories/${post.uri}`}> */}
-            <Link href={`stories/`}>
-              <a>{post.title}</a>
-            </Link>
+            <Link href={`stories/`}>{/* <a>{post.title}</a> */}</Link>
           </h3>
 
           <p className="text-base font-medium text-[#535353]"></p>
