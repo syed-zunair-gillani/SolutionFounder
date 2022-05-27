@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function StoryBox(props) {
+  console.log('Propes', props);
   return (
     <>
       <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
