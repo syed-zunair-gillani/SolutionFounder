@@ -4,9 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-export default function LatestSuccessStories({posts}) {
+export default function LatestSuccessStories() {
 
-  console.log('LatestSuccessStories', posts);
+  // console.log('LatestSuccessStories', posts);
 
   // const [querydata, setQueryData] = useState();
 
