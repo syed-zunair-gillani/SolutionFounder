@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function LatestSuccessStories({posts}) {
 
-  console.log('LatestSuccessStories', posts);
+  // console.log('LatestSuccessStories', posts);
 
   // const [querydata, setQueryData] = useState();
 
@@ -95,3 +95,6 @@ export default function LatestSuccessStories({posts}) {
     </>
   );
 }
+
+
+
