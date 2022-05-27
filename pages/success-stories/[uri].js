@@ -4,7 +4,7 @@ import { gql } from '@apollo/client';
 import Header from '../components/header';
 import Banner from '../components/banner';
 import Cardnew from '../components/card-new';
-import LatestStories from '../components/Latest-stories';
+
 
 export default function SlugPage({ post }) {
   return (
@@ -39,7 +39,7 @@ export default function SlugPage({ post }) {
         <Cardnew post={post.successStoryExtra.appIndustry} />
       </div>
 
-      {/* <LatestStories/> */}
+      
     </div>
   );
 }

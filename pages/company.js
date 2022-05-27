@@ -274,13 +274,13 @@ export default function Company({ team }) {
                             <div className="grid gap-5 md:grid-cols-4">
                                 {
                                     team.filter(department => department.node.teamExtraInfo.managementTeam===('Yes')).map(dpt =>(
-                                        <>
+                                        <div key={dpt.node.title}>
                                             <Team
                                                 name={dpt.node.title}
                                                 designation={dpt.node.teamExtraInfo.teamDesignation}
                                                 icon={dpt.node.featuredImage.node.mediaItemUrl}
                                             />
-                                        </>
+                                        </div>
                                     ))
                                 }
                             </div>
@@ -293,13 +293,13 @@ export default function Company({ team }) {
                             <div className="grid gap-5 md:grid-cols-4">
                                 {
                                     team.filter(department => department.node.teamExtraInfo.functionalTeam === 'Yes' ).map(dpt =>(
-                                        <>
+                                        <div key={dpt.node.title}>
                                             <Team
                                                 name={dpt.node.title}
                                                 designation={dpt.node.teamExtraInfo.teamDesignation}
                                                 icon={dpt.node.featuredImage.node.mediaItemUrl}
                                             />
-                                        </>
+                                        </div>
                                     ))
                                 }
                             </div>
@@ -312,13 +312,13 @@ export default function Company({ team }) {
                             <div className="grid gap-5 md:grid-cols-4">
                                 {
                                     team.filter(department => department.node.teamExtraInfo.technicalTeam === 'Yes' ).map(dpt =>(
-                                        <>
+                                        <div key={dpt.node.title}>
                                             <Team
                                                 name={dpt.node.title}
                                                 designation={dpt.node.teamExtraInfo.teamDesignation}
                                                 icon={dpt.node.featuredImage.node.mediaItemUrl}
                                             />
-                                        </>
+                                        </div>
                                     ))
                                 }
                             </div>
@@ -331,13 +331,13 @@ export default function Company({ team }) {
                             <div className="grid gap-5 md:grid-cols-4">
                                 {
                                     team.filter(department => department.node.teamExtraInfo.boardOfDirectors === 'Yes' ).map(dpt =>(
-                                        <>
+                                        <div key={dpt.node.title}>
                                             <Team
                                                 name={dpt.node.title}
                                                 designation={dpt.node.teamExtraInfo.teamDesignation}
                                                 icon={dpt.node.featuredImage.node.mediaItemUrl}
                                             />
-                                        </>
+                                        </div>
                                     ))
                                 }
                             </div>
