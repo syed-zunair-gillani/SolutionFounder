@@ -53,7 +53,7 @@ export default function LatestSuccessStories({posts}) {
           OUR SUCCESS STORIES
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
             {
               posts.map((item, index) => (
                 <div key={index} className='flex flex-col'>
@@ -87,7 +87,7 @@ export default function LatestSuccessStories({posts}) {
                 </div>
               ))
             }
-          </div>
+          </div> */}
 
       </section>
     </>
