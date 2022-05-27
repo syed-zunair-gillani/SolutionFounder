@@ -1,46 +1,48 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+// import axios from "axios";
+// import { useState, useEffect } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 
 
-export default function LatestSuccessStories() {
+export default function LatestSuccessStories({posts}) {
 
-  const [querydata, setQueryData] = useState();
+  console.log('LatestSuccessStories', posts);
+
+  // const [querydata, setQueryData] = useState();
 
 
-  useEffect(() => {
-    const axios = require("axios")
-    axios({
-      url: 'https://solutionfounder.com/graphql',
-      method: 'post',
-      data: {
-        query: `
-      query  GetAllSuccessStories {
-        allSuccessStories(first: 4) {
-          edges {
-            node {
-              title
-              uri
-              featuredImage {
-                node {
-                  mediaItemUrl
-                }
-              }
-              successStoryExtra {
-                shortInfo
-              }
-            }
-          }
-        }
-      }
-      `
-      }
-    }).then((result) => {
-      const responseReslt = result.data.data.allSuccessStories.edges;
-      setQueryData(responseReslt);
-    });
-  }, []);
+  // useEffect(() => {
+  //   const axios = require("axios")
+  //   axios({
+  //     url: 'https://solutionfounder.com/graphql',
+  //     method: 'post',
+  //     data: {
+  //       query: `
+  //     query  GetAllSuccessStories {
+  //       allSuccessStories(first: 4) {
+  //         edges {
+  //           node {
+  //             title
+  //             uri
+  //             featuredImage {
+  //               node {
+  //                 mediaItemUrl
+  //               }
+  //             }
+  //             successStoryExtra {
+  //               shortInfo
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //     `
+  //     }
+  //   }).then((result) => {
+  //     const responseReslt = result.data.data.allSuccessStories.edges;
+  //     setQueryData(responseReslt);
+  //   });
+  // }, []);
 
 
   return (
@@ -53,7 +55,7 @@ export default function LatestSuccessStories() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
             {
-              querydata?.map((item, index) => (
+              posts?.map((item, index) => (
                 <div key={index} className='flex flex-col'>
                   <Image
                     src={item.node.featuredImage.node.mediaItemUrl}

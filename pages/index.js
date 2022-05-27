@@ -8,8 +8,13 @@ import CTA from './components/cta';
 // importing images
 import AwardWinner from '../public/images/Award-winner.png';
 import LatestSuccessStories from './components/Latest-success-stories';
+import { gql } from '@apollo/client';
+import { client } from '../lib/apollo';
+
+
 
 export default function Home({ posts }) {
+  
   return (
     <>
       <Header />
@@ -76,9 +81,45 @@ export default function Home({ posts }) {
 
       <CTA />
 
-      <LatestSuccessStories/>
+      <LatestSuccessStories posts={posts}/>
 
       <Footer />
     </>
   );
+}
+
+
+
+
+
+export async function getStaticProps() {
+  const GET_POSTS = gql`
+    query GetAllSuccessStories {
+      allSuccessStories(first: 4) {
+        edges {
+          node {
+            title
+            uri
+            featuredImage {
+              node {
+                mediaItemUrl
+              }
+            }
+            successStoryExtra {
+              shortInfo
+            }
+          }
+        }
+      }
+    }
+  `;
+  const response = await client.query({
+    query: GET_POSTS,
+  });
+  const posts = response.data.allSuccessStories.edges;
+  return {
+    props: {
+      posts,
+    },
+  };
 }
