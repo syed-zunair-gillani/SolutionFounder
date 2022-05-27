@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function LatestSuccessStories({posts}) {
 
-  console.log('LatestSuccessStories', posts);
+  // console.log('LatestSuccessStories', posts);
 
   // const [querydata, setQueryData] = useState();
 
@@ -55,12 +55,11 @@ export default function LatestSuccessStories({posts}) {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto mb-8">
             {
-              posts?.map((item, index) => (
+              posts.map((item, index) => (
                 <div key={index} className='flex flex-col'>
                   <Image
                     src={item.node.featuredImage.node.mediaItemUrl}
                     alt={item.node.title}
-                    className=""
                     width={500}
                     height={350}
                   />
@@ -85,7 +84,6 @@ export default function LatestSuccessStories({posts}) {
                       </figure>
                     </div>
                   </div>
-
                 </div>
               ))
             }
