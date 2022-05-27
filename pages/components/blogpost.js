@@ -1,6 +1,8 @@
-import StoryBox from './story-box';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function BlogPost({ posts }) {
+  console.warn(posts);
   return (
     <>
       {posts &&
@@ -8,7 +10,7 @@ export default function BlogPost({ posts }) {
           <div key={index}>
             <div className="relative flex flex-col w-full bg-white rounded-md shadow-sh hover:shadow-shl">
               <Image
-                src={data.imglink}
+                src={data.featuredImage.node.mediaItemUrl}
                 alt={data.title}
                 className=""
                 width={500}
@@ -17,11 +19,8 @@ export default function BlogPost({ posts }) {
 
               <div className="p-5 space-y-1">
                 <h3 className="box-title">
-                  <Link href={`news-updates/${data.uri}`}>Title</Link>
+                  <Link href={`news-updates/${data.uri}`}>{data.title}</Link>
                 </h3>
-                <p className="text-base font-medium text-[#2e2929]">
-                  Descriasdf
-                </p>
               </div>
               <div className="absolute bottom-0 right-0 flex justify-end">
                 <figure className="max-h-[18px]">
